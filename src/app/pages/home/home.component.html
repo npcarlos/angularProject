@@ -1,0 +1,86 @@
+<!-- Next Steps -->
+<div class="home-section">
+  <div class="center">
+    <h1>Artistas recomendados</h1>
+    <p (click)="toogleSeleccionArtes()">
+      ¿Qué tipo de arte buscas?
+      <!-- <mat-icon *ngIf="!desplegarSeleccionArtes" aria-hidden="false" style="font-size: 1rem"
+        >keyboard_arrow_down</mat-icon
+      ><mat-icon *ngIf="desplegarSeleccionArtes" aria-hidden="false" style="font-size: 1rem"
+        >keyboard_arrow_up</mat-icon
+      > -->
+    </p>
+  </div>
+
+  <div *ngIf="desplegarSeleccionArtes">
+    <div class="card-container">
+      <button
+        *ngFor="let botonArte of listaArtes"
+        class="card card-small btn-arte"
+        style="width: auto"
+        (click)="seleccionarArte(botonArte)"
+        tabindex="0"
+      >
+        <!-- <mat-icon aria-hidden="false" style="font-size: 1rem">{{ botonArte.icon }}</mat-icon> -->
+        <span>{{ botonArte.name }}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Terminal -->
+  <div class="recommended">
+    <h3>{{ currentArtSubtitle }}</h3>
+    <div *ngFor="let botonArte of listaArtes">
+      <div *ngIf="botonArte === currentArt">
+        <div class="gallery">
+          <div *ngFor="let artist of artists">
+            {{ artist.name }}
+            <!-- <app-artist-card [artist]="artist"></app-artist-card> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Imports</h1>
+
+<div class="home-section">
+  <!-- Resources -->
+  <div class="center">
+    <h1>Próximos eventos</h1>
+    <p>Estos son los próximos eventos cerca a tu ubicación:</p>
+    <div class="github-star-badge">
+      <!-- <mat-icon aria-hidden="false" style="font-size: 1rem">room</mat-icon> -->
+      Bogotá D.C.
+    </div>
+  </div>
+
+  <!-- <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title class="mat-card-title">Nombre del evento</mat-card-title>
+      <mat-card-subtitle class="mat-card-subtitle">
+        <p><mat-icon aria-hidden="false" style="font-size: 1rem">room</mat-icon>Ubicación</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" />
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile
+        dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="mat-card-actions">
+      <button mat-button class="mat-focus-indicator mat-button mat-button-base">
+        <span class="mat-button-wrapper">LIKE</span>
+        <!-- <span matripple class="mat-ripple mat-button-ripple"></span> ->
+        <span class="mat-button-focus-overlay"></span>
+      </button>
+      <button mat-button class="mat-focus-indicator mat-button mat-button-base">
+        <span class="mat-button-wrapper">SHARE</span>
+        <!-- <span matripple class="mat-ripple mat-button-ripple"></span>->
+        <span class="mat-button-focus-overlay"></span>
+      </button>
+    </mat-card-actions>
+  </mat-card> -->
+</div>

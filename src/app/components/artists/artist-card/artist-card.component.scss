@@ -1,0 +1,69 @@
+.example-card {
+  max-width: 400px;
+  min-width: 280px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 500px;
+  background: #fff6eb;
+  border-radius: 20px;
+  box-shadow: #b1b1b1;
+}
+
+.example-header-image {
+  // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  margin-top: 1.3rem;
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.card-header {
+  background-size: cover;
+  border-radius: 20px;
+  height: 87px;
+}
+
+.mat-card-actions {
+  margin-left: -8px;
+  margin-right: -8px;
+  padding: 8px 0;
+}
+
+.mat-card-avatar {
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 100px;
+}

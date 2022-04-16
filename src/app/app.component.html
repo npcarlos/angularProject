@@ -9,9 +9,8 @@
 
 <style>
   :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-size: 14px;
     color: #333;
     box-sizing: border-box;
@@ -188,7 +187,7 @@
   }
 
   .terminal::before {
-    content: "\2022 \2022 \2022";
+    content: '\2022 \2022 \2022';
     position: absolute;
     top: 0;
     left: 0;
@@ -309,20 +308,8 @@
   <img width="100" alt="Artists Hive Logo" src="/assets/img/logo.png" />
 
   <div class="spacer"></div>
-  <a
-    aria-label="Angular on twitter"
-    target="_blank"
-    rel="noopener"
-    href="https://twitter.com/angular"
-    title="Twitter"
-  >
-    <svg
-      id="twitter-logo"
-      height="24"
-      data-name="Logo"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 400 400"
-    >
+  <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
+    <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
       <rect width="400" height="400" fill="none" />
       <path
         d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
@@ -330,13 +317,7 @@
       />
     </svg>
   </a>
-  <a
-    aria-label="Angular on YouTube"
-    target="_blank"
-    rel="noopener"
-    href="https://youtube.com/angular"
-    title="YouTube"
-  >
+  <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="https://youtube.com/angular" title="YouTube">
     <svg
       id="youtube-logo"
       height="24"
@@ -355,157 +336,9 @@
 </div>
 
 <div class="content" role="main">
-  <!-- Next Steps -->
-  <div class="home-section">
-    <div class="center">
-      <h1>Artistas recomendados</h1>
-      <p>
-        ¿Qué tipo de arte buscas?<mat-icon
-          *ngIf="!desplegarSeleccionArtes"
-          aria-hidden="false"
-          style="font-size: 1rem"
-          (click)="toogleSeleccionArtes()"
-          >keyboard_arrow_down</mat-icon
-        ><mat-icon
-          *ngIf="desplegarSeleccionArtes"
-          aria-hidden="false"
-          style="font-size: 1rem"
-          (click)="toogleSeleccionArtes()"
-          >keyboard_arrow_up</mat-icon
-        >
-      </p>
-    </div>
-
-    <div *ngIf="desplegarSeleccionArtes">
-      <div class="card-container">
-        <button
-          *ngFor="let botonArte of listaArtes"
-          class="card card-small btn-arte"
-          style="width: auto"
-          (click)="seleccionarArte(botonArte.name)"
-          tabindex="0"
-        >
-          <mat-icon aria-hidden="false" style="font-size: 1rem">{{
-            botonArte.icon
-          }}</mat-icon>
-          <span>{{ botonArte.name }}</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Terminal -->
-    <div class="recommended">
-      <h3>{{ arteActual }}</h3>
-      <div *ngFor="let botonArte of listaArtes">
-        <div *ngIf="botonArte.value === arteActual">
-          <div class="gallery">
-            <mat-card
-              *ngFor="let artista of botonArte.artistas"
-              class="example-card"
-            >
-              <mat-card-header>
-                <!-- <div mat-card-avatar class="example-header-image"></div> -->
-                <img mat-card-avatar src="{{ artista.profile_pic }}" />
-                <mat-card-title class="mat-card-title"
-                  >{{ artista.name }}
-                  <span *ngIf="artista.is_verified"
-                    ><mat-icon class="verified_user"
-                      >verified_user</mat-icon
-                    ></span
-                  >
-                </mat-card-title>
-                <mat-card-subtitle class="mat-card-subtitle">{{
-                  artista.subtitle
-                }}</mat-card-subtitle>
-              </mat-card-header>
-              <img
-                mat-card-image
-                src="{{ artista.photo }}"
-                alt="Photo of a Shiba Inu"
-              />
-              <mat-card-content>
-                <p>
-                  The Shiba Inu is the smallest of the six original and distinct
-                  spitz breeds of dog from Japan. A small, agile dog that copes
-                  very well with mountainous terrain, the Shiba Inu was
-                  originally bred for hunting.
-                </p>
-              </mat-card-content>
-              <mat-card-actions class="mat-card-actions">
-                <button
-                  mat-button
-                  class="mat-focus-indicator mat-button mat-button-base"
-                >
-                  <span class="mat-button-wrapper">LIKE</span>
-                  <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-                  <span class="mat-button-focus-overlay"></span>
-                </button>
-                <button
-                  mat-button
-                  class="mat-focus-indicator mat-button mat-button-base"
-                >
-                  <span class="mat-button-wrapper">SHARE</span>
-                  <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-                  <span class="mat-button-focus-overlay"></span>
-                </button>
-              </mat-card-actions>
-            </mat-card>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="home-section">
-    <!-- Resources -->
-    <h1>Próximos eventos</h1>
-    <p>Estos son los próximos eventos cerca a tu ubicación:</p>
-    <div class="github-star-badge">
-      <mat-icon aria-hidden="false" style="font-size: 1rem">room</mat-icon>
-      Bogotá D.C.
-    </div>
-
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title class="mat-card-title">Shiba Inu</mat-card-title>
-        <mat-card-subtitle class="mat-card-subtitle"
-          >Dog Breed</mat-card-subtitle
-        >
-      </mat-card-header>
-      <img
-        mat-card-image
-        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-        alt="Photo of a Shiba Inu"
-      />
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz
-          breeds of dog from Japan. A small, agile dog that copes very well with
-          mountainous terrain, the Shiba Inu was originally bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions class="mat-card-actions">
-        <button
-          mat-button
-          class="mat-focus-indicator mat-button mat-button-base"
-        >
-          <span class="mat-button-wrapper">LIKE</span>
-          <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-          <span class="mat-button-focus-overlay"></span>
-        </button>
-        <button
-          mat-button
-          class="mat-focus-indicator mat-button mat-button-base"
-        >
-          <span class="mat-button-wrapper">SHARE</span>
-          <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-          <span class="mat-button-focus-overlay"></span>
-        </button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-
+  <p>ANTES</p>
+  <router-outlet></router-outlet>
+  <p>DESPUÉS</p>
   <!-- Highlight Card -->
   <!-- <div class="card highlight-card card-small">
     <svg
@@ -757,12 +590,7 @@
       target="_blank"
       rel="noopener"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24.607"
-        height="23.447"
-        viewBox="0 0 24.607 23.447"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24.607" height="23.447" viewBox="0 0 24.607 23.447">
         <title>Meetup Logo</title>
         <path
           id="logo--mSwarm"
@@ -780,12 +608,7 @@
       target="_blank"
       rel="noopener"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="26"
-        height="26"
-        viewBox="0 0 245 240"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 245 240">
         <title>Discord Logo</title>
         <path
           d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"
@@ -802,35 +625,17 @@
     Love Angular?&nbsp;
     <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
       Give our repo a star.
-      <div class="github-star-badge">
-        <mat-icon aria-hidden="false" style="font-size: 1rem">room</mat-icon>
-        Bogotá D.C.
-      </div>
+      <div class="github-star-badge">Bogotá D.C.</div>
     </a>
     <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
-      <svg
-        class="material-icons"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-          fill="#1976d2"
-        />
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2" />
         <path d="M0 0h24v24H0z" fill="none" />
       </svg>
     </a>
   </footer>
 
-  <svg
-    id="clouds"
-    xmlns="http://www.w3.org/2000/svg"
-    width="2611.084"
-    height="485.677"
-    viewBox="0 0 2611.084 485.677"
-  >
+  <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
     <title>Gray Clouds Background</title>
     <path
       id="Path_39"
@@ -849,5 +654,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>

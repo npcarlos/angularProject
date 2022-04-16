@@ -6,6 +6,6 @@ import { PlaceDetailsPageComponent } from './place-details-page/place-details-pa
 @NgModule({
   declarations: [PlacesListPageComponent, PlaceDetailsPageComponent],
   imports: [CommonModule],
-  exports: [],
+  exports: [PlacesListPageComponent, PlaceDetailsPageComponent],
 })
-export class PlacesModule {}
+export class PlacesPagesModule {}

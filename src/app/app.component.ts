@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'angular-project';
   arteActual = '';
+  desplegarSeleccionArtes = false;
 
   listaArtes = [
     {
@@ -15,6 +16,66 @@ export class AppComponent implements OnInit {
       icon: 'music_note',
       value: 'Músicos y bandas locales',
       artistas: [
+        {
+          name: 'Petrona Martínez',
+          subtitle: 'Música folclórica del caribe',
+          is_verified: true,
+          profile_pic:
+            'https://i0.wp.com/www.expresionnaranja.com/wp-content/uploads/2019/01/pertona.png?w=788',
+          photo:
+            'https://cr00.epimg.net/radio/imagenes/2021/11/19/cartagena/1637324086_096489_1637324189_noticia_normal.jpg',
+          description: '',
+        },
+        {
+          name: 'Gualajo',
+          subtitle: 'El piano de la selva',
+          is_verified: false,
+          profile_pic:
+            'https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/portadas_relaciona_4_3/public/senalradio/articulo-noticia/galeriaimagen/gualajo.jpg?h=e414c3af&itok=YNZ1VW9-',
+          photo:
+            'https://www.eltiempo.com/files/image_640_428/files/crop/uploads/2018/05/25/5b08ab38c91eb.r_1527466171569.0-0-3000-1503.jpeg',
+          description: '',
+        },
+        {
+          name: 'Petrona Martínez',
+          subtitle: 'Música folclórica del caribe',
+          is_verified: true,
+          profile_pic:
+            'https://i0.wp.com/www.expresionnaranja.com/wp-content/uploads/2019/01/pertona.png?w=788',
+          photo:
+            'https://cr00.epimg.net/radio/imagenes/2021/11/19/cartagena/1637324086_096489_1637324189_noticia_normal.jpg',
+          description: '',
+        },
+        {
+          name: 'Gualajo',
+          subtitle: 'El piano de la selva',
+          is_verified: false,
+          profile_pic:
+            'https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/portadas_relaciona_4_3/public/senalradio/articulo-noticia/galeriaimagen/gualajo.jpg?h=e414c3af&itok=YNZ1VW9-',
+          photo:
+            'https://www.eltiempo.com/files/image_640_428/files/crop/uploads/2018/05/25/5b08ab38c91eb.r_1527466171569.0-0-3000-1503.jpeg',
+          description: '',
+        },
+        {
+          name: 'Petrona Martínez',
+          subtitle: 'Música folclórica del caribe',
+          is_verified: true,
+          profile_pic:
+            'https://i0.wp.com/www.expresionnaranja.com/wp-content/uploads/2019/01/pertona.png?w=788',
+          photo:
+            'https://cr00.epimg.net/radio/imagenes/2021/11/19/cartagena/1637324086_096489_1637324189_noticia_normal.jpg',
+          description: '',
+        },
+        {
+          name: 'Gualajo',
+          subtitle: 'El piano de la selva',
+          is_verified: false,
+          profile_pic:
+            'https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/portadas_relaciona_4_3/public/senalradio/articulo-noticia/galeriaimagen/gualajo.jpg?h=e414c3af&itok=YNZ1VW9-',
+          photo:
+            'https://www.eltiempo.com/files/image_640_428/files/crop/uploads/2018/05/25/5b08ab38c91eb.r_1527466171569.0-0-3000-1503.jpeg',
+          description: '',
+        },
         {
           name: 'Petrona Martínez',
           subtitle: 'Música folclórica del caribe',
@@ -114,6 +175,10 @@ export class AppComponent implements OnInit {
     this.arteActual =
       this.listaArtes.find((arte) => arte.name === name)?.value ||
       'No se ha seleccionado ningún arte';
-    console.log(this.arteActual);
+    this.desplegarSeleccionArtes = false;
+  }
+
+  toogleSeleccionArtes() {
+    this.desplegarSeleccionArtes = !this.desplegarSeleccionArtes;
   }
 }

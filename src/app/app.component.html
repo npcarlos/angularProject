@@ -355,45 +355,156 @@
 </div>
 
 <div class="content" role="main">
-  <!-- Resources -->
-  <h1>Próximos eventos</h1>
-  <p>Estos son los próximos eventos cerca a tu ubicación:</p>
-  <div class="github-star-badge">
-    <mat-icon aria-hidden="false" style="font-size: 1rem">room</mat-icon>
-    Bogotá D.C.
+  <!-- Next Steps -->
+  <div class="home-section">
+    <div class="center">
+      <h1>Artistas recomendados</h1>
+      <p>
+        ¿Qué tipo de arte buscas?<mat-icon
+          *ngIf="!desplegarSeleccionArtes"
+          aria-hidden="false"
+          style="font-size: 1rem"
+          (click)="toogleSeleccionArtes()"
+          >keyboard_arrow_down</mat-icon
+        ><mat-icon
+          *ngIf="desplegarSeleccionArtes"
+          aria-hidden="false"
+          style="font-size: 1rem"
+          (click)="toogleSeleccionArtes()"
+          >keyboard_arrow_up</mat-icon
+        >
+      </p>
+    </div>
+
+    <div *ngIf="desplegarSeleccionArtes">
+      <div class="card-container">
+        <button
+          *ngFor="let botonArte of listaArtes"
+          class="card card-small btn-arte"
+          style="width: auto"
+          (click)="seleccionarArte(botonArte.name)"
+          tabindex="0"
+        >
+          <mat-icon aria-hidden="false" style="font-size: 1rem">{{
+            botonArte.icon
+          }}</mat-icon>
+          <span>{{ botonArte.name }}</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="recommended">
+      <h3>{{ arteActual }}</h3>
+      <div *ngFor="let botonArte of listaArtes">
+        <div *ngIf="botonArte.value === arteActual">
+          <div class="gallery">
+            <mat-card
+              *ngFor="let artista of botonArte.artistas"
+              class="example-card"
+            >
+              <mat-card-header>
+                <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                <img mat-card-avatar src="{{ artista.profile_pic }}" />
+                <mat-card-title class="mat-card-title"
+                  >{{ artista.name }}
+                  <span *ngIf="artista.is_verified"
+                    ><mat-icon class="verified_user"
+                      >verified_user</mat-icon
+                    ></span
+                  >
+                </mat-card-title>
+                <mat-card-subtitle class="mat-card-subtitle">{{
+                  artista.subtitle
+                }}</mat-card-subtitle>
+              </mat-card-header>
+              <img
+                mat-card-image
+                src="{{ artista.photo }}"
+                alt="Photo of a Shiba Inu"
+              />
+              <mat-card-content>
+                <p>
+                  The Shiba Inu is the smallest of the six original and distinct
+                  spitz breeds of dog from Japan. A small, agile dog that copes
+                  very well with mountainous terrain, the Shiba Inu was
+                  originally bred for hunting.
+                </p>
+              </mat-card-content>
+              <mat-card-actions class="mat-card-actions">
+                <button
+                  mat-button
+                  class="mat-focus-indicator mat-button mat-button-base"
+                >
+                  <span class="mat-button-wrapper">LIKE</span>
+                  <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
+                  <span class="mat-button-focus-overlay"></span>
+                </button>
+                <button
+                  mat-button
+                  class="mat-focus-indicator mat-button mat-button-base"
+                >
+                  <span class="mat-button-wrapper">SHARE</span>
+                  <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
+                  <span class="mat-button-focus-overlay"></span>
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title class="mat-card-title">Shiba Inu</mat-card-title>
-      <mat-card-subtitle class="mat-card-subtitle">Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-      alt="Photo of a Shiba Inu"
-    />
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz
-        breeds of dog from Japan. A small, agile dog that copes very well with
-        mountainous terrain, the Shiba Inu was originally bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions class="mat-card-actions">
-      <button mat-button class="mat-focus-indicator mat-button mat-button-base">
-        <span class="mat-button-wrapper">LIKE</span>
-        <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-        <span class="mat-button-focus-overlay"></span>
-      </button>
-      <button mat-button class="mat-focus-indicator mat-button mat-button-base">
-        <span class="mat-button-wrapper">SHARE</span>
-        <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-        <span class="mat-button-focus-overlay"></span>
-      </button>
-    </mat-card-actions>
-  </mat-card>
+  <div class="home-section">
+    <!-- Resources -->
+    <h1>Próximos eventos</h1>
+    <p>Estos son los próximos eventos cerca a tu ubicación:</p>
+    <div class="github-star-badge">
+      <mat-icon aria-hidden="false" style="font-size: 1rem">room</mat-icon>
+      Bogotá D.C.
+    </div>
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="mat-card-title">Shiba Inu</mat-card-title>
+        <mat-card-subtitle class="mat-card-subtitle"
+          >Dog Breed</mat-card-subtitle
+        >
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz
+          breeds of dog from Japan. A small, agile dog that copes very well with
+          mountainous terrain, the Shiba Inu was originally bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="mat-card-actions">
+        <button
+          mat-button
+          class="mat-focus-indicator mat-button mat-button-base"
+        >
+          <span class="mat-button-wrapper">LIKE</span>
+          <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
+          <span class="mat-button-focus-overlay"></span>
+        </button>
+        <button
+          mat-button
+          class="mat-focus-indicator mat-button mat-button-base"
+        >
+          <span class="mat-button-wrapper">SHARE</span>
+          <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
+          <span class="mat-button-focus-overlay"></span>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 
   <!-- Highlight Card -->
   <!-- <div class="card highlight-card card-small">
@@ -636,84 +747,6 @@
       </svg>
     </a>
   </div> -->
-
-  <!-- Next Steps -->
-  <h1>Artistas recomendados</h1>
-  <p>¿Qué tipo de arte buscas?</p>
-
-  <input type="hidden" #selection />
-
-  <div class="card-container">
-    <button
-      *ngFor="let botonArte of listaArtes"
-      class="card card-small"
-      (click)="seleccionarArte(botonArte.name)"
-      tabindex="0"
-    >
-      <mat-icon aria-hidden="false" style="font-size: 1rem">{{
-        botonArte.icon
-      }}</mat-icon>
-      <span>{{ botonArte.name }}</span>
-    </button>
-  </div>
-
-  <!-- Terminal -->
-  <div>
-    <div *ngFor="let botonArte of listaArtes">
-      <div *ngIf="botonArte.value === arteActual">
-        <h3>{{ botonArte.value }}</h3>
-        <mat-card
-          *ngFor="let artista of botonArte.artistas"
-          class="example-card"
-        >
-          <mat-card-header>
-            <!-- <div mat-card-avatar class="example-header-image"></div> -->
-            <img mat-card-avatar src="{{ artista.profile_pic }}" />
-            <mat-card-title class="mat-card-title"
-              >{{ artista.name }}
-              <span *ngIf="artista.is_verified"
-                ><mat-icon class="verified_user">verified_user</mat-icon></span
-              >
-            </mat-card-title>
-            <mat-card-subtitle class="mat-card-subtitle">{{
-              artista.subtitle
-            }}</mat-card-subtitle>
-          </mat-card-header>
-          <img
-            mat-card-image
-            src="{{ artista.photo }}"
-            alt="Photo of a Shiba Inu"
-          />
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct
-              spitz breeds of dog from Japan. A small, agile dog that copes very
-              well with mountainous terrain, the Shiba Inu was originally bred
-              for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions class="mat-card-actions">
-            <button
-              mat-button
-              class="mat-focus-indicator mat-button mat-button-base"
-            >
-              <span class="mat-button-wrapper">LIKE</span>
-              <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-              <span class="mat-button-focus-overlay"></span>
-            </button>
-            <button
-              mat-button
-              class="mat-focus-indicator mat-button mat-button-base"
-            >
-              <span class="mat-button-wrapper">SHARE</span>
-              <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
-              <span class="mat-button-focus-overlay"></span>
-            </button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
-    </div>
-  </div>
 
   <!-- Links -->
   <div class="card-container">

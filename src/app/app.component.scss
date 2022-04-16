@@ -1,6 +1,9 @@
 .example-card {
   max-width: 400px;
-  margin-bottom: 10rem;
+  min-width: 280px;
+  // margin-bottom: 10rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .example-header-image {
@@ -50,6 +53,27 @@
   font-weight: 500
 }
 
+.recommended{
+  width: 100%;
+  flex-direction: row;
+  .gallery{
+    display: flex;
+    overflow-x: auto;
+  }
+}
+
+.btn-arte{
+  width: auto;
+}
+
+.home-section{
+  margin-bottom: 8rem;
+  width: 100%;
+}
+
+.center{
+  text-align: center;
+}
 // .mat-button-ripple.mat-ripple, .mat-button-focus-overlay {
 //   top: 0;
 //   left: 0;

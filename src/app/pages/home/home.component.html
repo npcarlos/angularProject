@@ -35,18 +35,28 @@
   </div> -->
 
   <app-recommended-selection
-    [titleRecomendation]="'Artistas'"
+    [titleRecomendation]="'Top 5 Artistas'"
+    [description]="'Estos son los artistas más cotizados'"
     [listRecomendations]="artists"
     [recomendationCardParams]="artistsRecomendationCardParams"
     (onRecommendedClicked)="recommendedClicked($event)"
   ></app-recommended-selection>
-</div>
 
-<div class="home-section">
   <app-recommended-selection
-    [titleRecomendation]="'Lugares'"
+    [titleRecomendation]="'Artistas cercanos'"
+    [description]="'Descubre los artistas más buscado cerca a tu ubicación'"
+    [listRecomendations]="topTenArtists"
+    [recomendationCardParams]="artistsRecomendationCardParams"
+    (onRecommendedClicked)="recommendedClicked($event)"
+  ></app-recommended-selection>
+
+  <app-recommended-selection
+    [titleRecomendation]="'Lugares cercanos'"
+    [description]="'Estos son los lugares más cercanos a tu ubicación que están buscando artistas'"
     [listRecomendations]="places"
     [recomendationCardParams]="placesRecomendationCardParams"
     (onRecommendedClicked)="recommendedClicked($event)"
   ></app-recommended-selection>
 </div>
+
+<div class="home-section"></div>

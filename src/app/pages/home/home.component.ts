@@ -14,6 +14,7 @@ const MAX_RECOMMENDATIONS: number = 5;
 })
 export class HomeComponent implements OnInit {
   artists: ArtistModel[] = [];
+  topTenArtists: ArtistModel[] = [];
   places: ArtistModel[] = [];
 
   artistsRecomendationCardParams: RecommendationCardParams = {};
@@ -26,9 +27,11 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.artistsStoreService
       .getArtists({ limit: MAX_RECOMMENDATIONS })
       .subscribe((artists) => (this.artists = artists));
+    this.artistsStoreService.getArtistTop10Artists().subscribe((artists) => (this.topTenArtists = artists));
     this.placesStoreService.getPlaces({ limit: MAX_RECOMMENDATIONS }).subscribe((places) => (this.places = places));
   }
 

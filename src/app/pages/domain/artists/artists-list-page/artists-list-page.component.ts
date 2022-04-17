@@ -13,6 +13,7 @@ export class ArtistsListPageComponent implements OnInit {
   constructor(private artistsStoreService: ArtistsStoreServiceService) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.artistsStoreService.getArtists().subscribe((artists) => (this.artists = artists));
   }
 }

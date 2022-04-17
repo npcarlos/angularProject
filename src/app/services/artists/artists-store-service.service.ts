@@ -11,14 +11,24 @@ export class ArtistsStoreServiceService {
   constructor() {}
 
   getArtists(params: { limit?: number } = {}): Observable<ArtistModel[]> {
-    const artists = ARTISTS || [];
+    const artists = [...ARTISTS] || [];
 
     const limit = params.limit || artists.length;
 
-    return of(artists.slice(0, limit));
+    const limited = [];
+    while (limited.length < limit && artists.length > 0) {
+      const randomPosition = Math.random() * artists.length;
+      limited.push(artists.splice(randomPosition, 1)[0]);
+    }
+
+    return of(limited);
   }
 
   getArtist(id: string): Observable<ArtistModel> {
     return of(ARTISTS.find((artist) => artist.id === id));
+  }
+
+  getArtistTop10Artists(): Observable<ArtistModel[]> {
+    return this.getArtists({ limit: 8 });
   }
 }

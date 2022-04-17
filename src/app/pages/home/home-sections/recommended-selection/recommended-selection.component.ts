@@ -20,6 +20,7 @@ export class RecommendedSelectionComponent implements OnInit {
   }
 
   @Input() titleRecomendation: string = '';
+  @Input() description: string = '';
   @Input() recomendationCardParams: RecommendationCardParams = {};
   @Input() listRecomendations: ArtistModel[] = [];
   @Output() onRecommendedClicked: EventEmitter<EntityCardEvent> = new EventEmitter<EntityCardEvent>();

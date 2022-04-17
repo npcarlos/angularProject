@@ -10,11 +10,17 @@ export class PlacesStoreServiceService {
   constructor() {}
 
   getPlaces(params: { limit?: number } = {}): Observable<ArtistModel[]> {
-    const places = PLACES || [];
+    const places = [...PLACES] || [];
 
     const limit = params.limit || places.length;
 
-    return of(places.slice(0, limit));
+    const limited = [];
+    while (limited.length < limit && places.length > 0) {
+      const randomPosition = Math.random() * places.length;
+      limited.push(places.splice(randomPosition, 1)[0]);
+    }
+
+    return of(limited);
   }
 
   getPlace(id: string): Observable<ArtistModel> {

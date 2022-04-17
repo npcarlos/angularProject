@@ -6,16 +6,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatIconModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatCardModule, MatIconModule, PagesModule],
   providers: [],
   bootstrap: [AppComponent],
 })

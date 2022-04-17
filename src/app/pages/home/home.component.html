@@ -1,0 +1,6 @@
+<h1>Bienvenido to Artists Hive!</h1>
+<div *ngFor="let artist of artists">
+  <a routerLink="/artist/{{ artist.id }}">
+    {{ artist.name }}
+  </a>
+</div>

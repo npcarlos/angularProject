@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EntityCardEvent } from 'src/app/components/common-ui/atoms/entity-card/entity-card.events';
 import { ArtistModel } from 'src/app/domain/artists/artist';
 import { ArtistsStoreServiceService } from 'src/app/services/artists/artists-store-service.service';
+import { PlacesStoreServiceService } from 'src/app/services/places/places-store-service.service';
+import { RecommendationCardParams } from './home-sections/recommended-selection/recommended-selection.component';
 
+const MAX_RECOMMENDATIONS: number = 5;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,10 +14,30 @@ import { ArtistsStoreServiceService } from 'src/app/services/artists/artists-sto
 })
 export class HomeComponent implements OnInit {
   artists: ArtistModel[] = [];
+  places: ArtistModel[] = [];
 
-  constructor(private artistsStoreService: ArtistsStoreServiceService) {}
+  artistsRecomendationCardParams: RecommendationCardParams = {};
+  placesRecomendationCardParams: RecommendationCardParams = { showMainPhoto: false };
+
+  constructor(
+    private router: Router,
+    private artistsStoreService: ArtistsStoreServiceService,
+    private placesStoreService: PlacesStoreServiceService
+  ) {}
 
   ngOnInit(): void {
-    this.artistsStoreService.getArtists({ limit: 6 }).subscribe((artists) => (this.artists = artists));
+    this.artistsStoreService
+      .getArtists({ limit: MAX_RECOMMENDATIONS })
+      .subscribe((artists) => (this.artists = artists));
+    this.placesStoreService.getPlaces({ limit: MAX_RECOMMENDATIONS }).subscribe((places) => (this.places = places));
+  }
+
+  recommendedClicked(event: EntityCardEvent) {
+    let path = 'artist';
+    if (event.item.artistType === 'place') {
+      path = 'place';
+    }
+    const itemId = event.item.id;
+    this.router.navigate([`/${path}/${itemId}`]);
   }
 }

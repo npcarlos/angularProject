@@ -1,8 +1,9 @@
 .recommended {
   width: 100%;
-  flex-direction: row;
+  display: grid;
   .gallery {
     display: flex;
+    flex-direction: row;
     overflow-x: auto;
   }
 }

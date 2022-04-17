@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ARTISTS } from 'mocks/artists.mocks';
+import { ARTISTS } from 'mocks/artists.mock';
 import { Observable, of } from 'rxjs';
 import { ArtistModel } from 'src/app/domain/artists/artist';
 import { VerificationStatus } from 'src/app/domain/enums/verification';

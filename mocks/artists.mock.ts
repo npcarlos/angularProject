@@ -3,6 +3,7 @@ import { VerificationStatus } from 'src/app/domain/enums/verification';
 
 export const MUSICIANS = [
   new ArtistModel({
+    artistType: 'musician',
     id: '1',
     name: 'Petrona Martínez',
     subtitle: 'Música folclórica del caribe',
@@ -12,6 +13,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '2',
     name: 'Gualajo',
     subtitle: 'El piano de la selva',
@@ -23,6 +25,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '3',
     name: 'Bluefinch & The Wanderlust',
     subtitle: 'Just Rockers!',
@@ -35,6 +38,7 @@ export const MUSICIANS = [
       'Bluefinch & The Wanderlust es una banda de Rock Alternativo bogotana formada por Osvaldo Oliver (Bajo y Coros), Julian Londoño, (Guitarra Líder), Juan Pinzón (Batería y Coros) y Sergio de Helena (Voz y Guitarra). Aunque el rock alternativo se distingue como la influencia más destacada, no se dejan encasillar en un sólo género, seducidos por el blues, el rock británico, las nuevas propuestas locales y el deseo constante de explorar sus límites la banda se compromete con lo heterogéneo, su sonido siempre contundente más nunca unívoco refleja la riqueza del contexto bogotano en el que viven sus músicos.',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '4',
     name: 'Petrona Martínez',
     subtitle: 'Música folclórica del caribe',
@@ -44,6 +48,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '5',
     name: 'Gualajo',
     subtitle: 'El piano de la selva',
@@ -55,6 +60,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '6',
     name: 'Bluefinch & The Wanderlust',
     subtitle: 'Just Rockers!',
@@ -67,6 +73,7 @@ export const MUSICIANS = [
       'Bluefinch & The Wanderlust es una banda de Rock Alternativo bogotana formada por Osvaldo Oliver (Bajo y Coros), Julian Londoño, (Guitarra Líder), Juan Pinzón (Batería y Coros) y Sergio de Helena (Voz y Guitarra). Aunque el rock alternativo se distingue como la influencia más destacada, no se dejan encasillar en un sólo género, seducidos por el blues, el rock británico, las nuevas propuestas locales y el deseo constante de explorar sus límites la banda se compromete con lo heterogéneo, su sonido siempre contundente más nunca unívoco refleja la riqueza del contexto bogotano en el que viven sus músicos.',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '7',
     name: 'Petrona Martínez',
     subtitle: 'Música folclórica del caribe',
@@ -76,6 +83,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '8',
     name: 'Gualajo',
     subtitle: 'El piano de la selva',
@@ -87,6 +95,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '8',
     name: 'Bluefinch & The Wanderlust',
     subtitle: 'Just Rockers!',
@@ -99,6 +108,7 @@ export const MUSICIANS = [
       'Bluefinch & The Wanderlust es una banda de Rock Alternativo bogotana formada por Osvaldo Oliver (Bajo y Coros), Julian Londoño, (Guitarra Líder), Juan Pinzón (Batería y Coros) y Sergio de Helena (Voz y Guitarra). Aunque el rock alternativo se distingue como la influencia más destacada, no se dejan encasillar en un sólo género, seducidos por el blues, el rock británico, las nuevas propuestas locales y el deseo constante de explorar sus límites la banda se compromete con lo heterogéneo, su sonido siempre contundente más nunca unívoco refleja la riqueza del contexto bogotano en el que viven sus músicos.',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '9',
     name: 'Petrona Martínez',
     subtitle: 'Música folclórica del caribe',
@@ -108,6 +118,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '10',
     name: 'Gualajo',
     subtitle: 'El piano de la selva',
@@ -119,6 +130,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '11',
     name: 'Bluefinch & The Wanderlust',
     subtitle: 'Just Rockers!',
@@ -131,6 +143,7 @@ export const MUSICIANS = [
       'Bluefinch & The Wanderlust es una banda de Rock Alternativo bogotana formada por Osvaldo Oliver (Bajo y Coros), Julian Londoño, (Guitarra Líder), Juan Pinzón (Batería y Coros) y Sergio de Helena (Voz y Guitarra). Aunque el rock alternativo se distingue como la influencia más destacada, no se dejan encasillar en un sólo género, seducidos por el blues, el rock británico, las nuevas propuestas locales y el deseo constante de explorar sus límites la banda se compromete con lo heterogéneo, su sonido siempre contundente más nunca unívoco refleja la riqueza del contexto bogotano en el que viven sus músicos.',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '12',
     name: 'Petrona Martínez',
     subtitle: 'Música folclórica del caribe',
@@ -140,6 +153,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '13',
     name: 'Gualajo',
     subtitle: 'El piano de la selva',
@@ -151,6 +165,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '14',
     name: 'Bluefinch & The Wanderlust',
     subtitle: 'Just Rockers!',
@@ -163,6 +178,7 @@ export const MUSICIANS = [
       'Bluefinch & The Wanderlust es una banda de Rock Alternativo bogotana formada por Osvaldo Oliver (Bajo y Coros), Julian Londoño, (Guitarra Líder), Juan Pinzón (Batería y Coros) y Sergio de Helena (Voz y Guitarra). Aunque el rock alternativo se distingue como la influencia más destacada, no se dejan encasillar en un sólo género, seducidos por el blues, el rock británico, las nuevas propuestas locales y el deseo constante de explorar sus límites la banda se compromete con lo heterogéneo, su sonido siempre contundente más nunca unívoco refleja la riqueza del contexto bogotano en el que viven sus músicos.',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '15',
     name: 'Petrona Martínez',
     subtitle: 'Música folclórica del caribe',
@@ -172,6 +188,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '16',
     name: 'Gualajo',
     subtitle: 'El piano de la selva',
@@ -183,6 +200,7 @@ export const MUSICIANS = [
     description: '',
   }),
   new ArtistModel({
+    artistType: 'musician',
     id: '17',
     name: 'Bluefinch & The Wanderlust',
     subtitle: 'Just Rockers!',

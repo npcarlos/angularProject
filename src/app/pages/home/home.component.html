@@ -8,7 +8,7 @@
 <!-- Next Steps -->
 <div class="home-section">
   <div class="center">
-    <h1>Artistas recomendados</h1>
+    <h1>Recomendaciones</h1>
     <!-- <p (click)="toogleSeleccionArtes()"> -->
     <!-- ¿Qué tipo de arte buscas? -->
     <!-- <mat-icon *ngIf="!desplegarSeleccionArtes" aria-hidden="false" style="font-size: 1rem"
@@ -35,8 +35,18 @@
   </div> -->
 
   <app-recommended-selection
-    [titleRecomendation]="'Artistas recomendados'"
+    [titleRecomendation]="'Artistas'"
     [listRecomendations]="artists"
-    [isLinkeable]="true"
+    [recomendationCardParams]="artistsRecomendationCardParams"
+    (onRecommendedClicked)="recommendedClicked($event)"
+  ></app-recommended-selection>
+</div>
+
+<div class="home-section">
+  <app-recommended-selection
+    [titleRecomendation]="'Lugares'"
+    [listRecomendations]="places"
+    [recomendationCardParams]="placesRecomendationCardParams"
+    (onRecommendedClicked)="recommendedClicked($event)"
   ></app-recommended-selection>
 </div>

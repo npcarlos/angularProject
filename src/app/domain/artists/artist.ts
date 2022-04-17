@@ -1,6 +1,7 @@
 import { VerificationStatus } from '../enums/verification';
 
 export interface ArtistTemplate {
+  artistType: string;
   id: string;
   name: string;
   subtitle: string;
@@ -10,6 +11,7 @@ export interface ArtistTemplate {
   description: string;
 }
 export class ArtistModel implements ArtistTemplate {
+  artistType: string;
   id: string;
   name: string;
   subtitle: string;
@@ -19,6 +21,7 @@ export class ArtistModel implements ArtistTemplate {
   description: string;
 
   constructor(private readonly template: ArtistTemplate) {
+    this.artistType = template.artistType;
     this.id = template.id;
     this.name = template.name;
     this.subtitle = template.subtitle;

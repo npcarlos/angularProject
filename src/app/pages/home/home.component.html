@@ -1,6 +1,42 @@
 <h1>Bienvenido to Artists Hive!</h1>
-<div *ngFor="let artist of artists">
+<!-- <div *ngFor="let artist of artists">
   <a routerLink="/artist/{{ artist.id }}">
     {{ artist.name }}
   </a>
+  <app-verification-sign></app-verification-sign>
+</div> -->
+<!-- Next Steps -->
+<div class="home-section">
+  <div class="center">
+    <h1>Artistas recomendados</h1>
+    <!-- <p (click)="toogleSeleccionArtes()"> -->
+    <!-- ¿Qué tipo de arte buscas? -->
+    <!-- <mat-icon *ngIf="!desplegarSeleccionArtes" aria-hidden="false" style="font-size: 1rem"
+        >keyboard_arrow_down</mat-icon
+      ><mat-icon *ngIf="desplegarSeleccionArtes" aria-hidden="false" style="font-size: 1rem"
+        >keyboard_arrow_up</mat-icon
+      > -->
+    <!-- </p> -->
+  </div>
+
+  <!-- <div *ngIf="desplegarSeleccionArtes">
+    <div class="card-container">
+      <button
+        *ngFor="let botonArte of listaArtes"
+        class="card card-small btn-arte"
+        style="width: auto"
+        (click)="seleccionarArte(botonArte)"
+        tabindex="0"
+      >
+        <mat-icon aria-hidden="false" style="font-size: 1rem">{{ botonArte.icon }}</mat-icon>
+        <span>{{ botonArte.name }}</span>
+      </button>
+    </div>
+  </div> -->
+
+  <app-recommended-selection
+    [titleRecomendation]="'Artistas recomendados'"
+    [listRecomendations]="artists"
+    [isLinkeable]="true"
+  ></app-recommended-selection>
 </div>

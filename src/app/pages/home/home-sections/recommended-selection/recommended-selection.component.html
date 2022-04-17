@@ -1,0 +1,16 @@
+<h3>{{ titleRecomendation }}</h3>
+<div class="recommended">
+  <div class="gallery">
+    <app-entity-card
+      *ngFor="let recomendation of listRecomendations"
+      [profile_pic]="recomendation.profile_pic"
+      [main_photo]="recomendation.photo"
+      [title]="recomendation.name"
+      [subtitle]="recomendation.subtitle"
+      [description]="recomendation.description"
+      [verification_status]="recomendation.verified_status"
+      [link]="'{{recomendation.id}}'"
+      (onCardClick)="cardClicked($event)"
+    ></app-entity-card>
+  </div>
+</div>

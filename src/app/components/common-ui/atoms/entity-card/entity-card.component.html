@@ -1,0 +1,35 @@
+<mat-card class="entity-card">
+  <mat-card-header class="card-header">
+    <img
+      *ngIf="profile_pic"
+      mat-card-avatar
+      src="{{ profile_pic }} "
+      alt="{{ title }}"
+      (click)="clicGeneral('profile_pic')"
+    />
+    <mat-card-title class="mat-card-title" (click)="clicGeneral('title')"
+      >{{ title }} <app-verification-sign [verification_status]="verification_status"></app-verification-sign
+    ></mat-card-title>
+
+    <mat-card-subtitle class="mat-card-subtitle">{{ subtitle }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img *ngIf="main_photo" mat-card-image src="{{ main_photo }}" alt="{{ title }}" (click)="clicGeneral('main_img')" />
+  <mat-card-content>
+    <p class="card-description">
+      {{ description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="mat-card-actions">
+    <button mat-button class="mat-focus-indicator mat-button mat-button-base">
+      <span class="mat-button-wrapper">LIKE</span>
+      <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
+      <span class="mat-button-focus-overlay"></span>
+    </button>
+    <button mat-button class="mat-focus-indicator mat-button mat-button-base">
+      <span class="mat-button-wrapper">SHARE</span>
+      <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->
+      <span class="mat-button-focus-overlay"></span>
+    </button>
+  </mat-card-actions>
+</mat-card>

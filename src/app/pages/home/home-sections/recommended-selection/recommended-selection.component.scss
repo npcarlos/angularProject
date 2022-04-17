@@ -1,0 +1,8 @@
+.recommended {
+  width: 100%;
+  flex-direction: row;
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+  }
+}

@@ -95,7 +95,7 @@ export class EntityCardComponent implements OnInit {
     }
 
     if (this.entityCardParams.showTitle) {
-      this.title = this.item.name + ' ' + this.item.id;
+      this.title = this.item.name;
     }
 
     if (this.entityCardParams.showVerificationSign) {

@@ -29,6 +29,6 @@ export class ArtistsStoreServiceService {
   }
 
   getArtistTop10Artists(): Observable<ArtistModel[]> {
-    return this.getArtists({ limit: 8 });
+    return this.getArtists();
   }
 }

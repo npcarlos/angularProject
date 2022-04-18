@@ -1,4 +1,33 @@
-<h1>Artista</h1>
-<div *ngIf="artist">
-  {{ artist.name }}
+<div *ngIf="artist" class="profile-header">
+  <img class="avatar" src="{{ artist.profile_pic }} " alt="{{ artist.name }}" />
+  <div class="header-title">
+    <div class="artist-name">
+      <h2>{{ artist.name }}</h2>
+      <app-verification-sign [verification_status]="artist.verified_status"></app-verification-sign>
+    </div>
+    <div class="artist-name">
+      <p>{{ artist.subtitle }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="full-content">
+  <div class="subpages-tabs">
+    <div *ngFor="let subpage of subpages">
+      <div class="subpage-tab" (click)="setCurrentSubpage(subpage)">
+        <h5>
+          {{ subpage.title }}
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="currentSubpage">
+    <div *ngFor="let section of currentSubpage.sections">
+      <h2 class="section-title">{{ section.title }}</h2>
+      <div class="attribute" *ngFor="let attribute of section.attributes">
+        <mat-icon class="attribute-icon">{{ attribute.icon }}</mat-icon>
+        <p>{{ attribute.name }}: {{ getData(attribute.name) }}</p>
+      </div>
+    </div>
+  </div>
 </div>

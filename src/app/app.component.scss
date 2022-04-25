@@ -264,7 +264,17 @@ svg#clouds {
   width: 1920px;
 }
 
+mat-drawer {
+  width: 35%;
+}
 /* Responsive Styles */
+
+@media screen and (max-width: 850px) {
+  mat-drawer {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .card-container > *:not(.circle-link),
   .terminal {
@@ -291,6 +301,10 @@ svg#clouds {
     display: none;
     visibility: hidden;
   }
+
+  mat-drawer {
+    width: 70%;
+  }
 }
 
 .btn-arte {
@@ -299,6 +313,23 @@ svg#clouds {
 
 .center {
   text-align: center;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: #efe5b0;
+  color: #7a260a;
+}
+
+.mat-drawer:not(.mat-drawer-side) {
+  position: fixed;
+}
+
+.mat-drawer-backdrop {
+  position: fixed !important;
 }
 // .mat-button-ripple.mat-ripple, .mat-button-focus-overlay {
 //   top: 0;

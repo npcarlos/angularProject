@@ -1,5 +1,5 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div *ngIf="false" class="toolbar" role="banner">
   <img width="100" alt="Artists Hive Logo" src="/assets/img/logo.png" />
 
   <div class="spacer"></div>
@@ -29,11 +29,42 @@
     </svg>
   </a>
 </div>
+<p>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="toogleMenu()">menu</mat-icon>
+    </button>
+    <span>Artists Hive</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
 
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer [mode]="'over'">
+    <mat-list>
+      <!-- <mat-divider></mat-divider> -->
+      <div mat-subheader>Herramientas</div>
+      <mat-list-item *ngFor="let note of notes" (click)="clickSideMenu(note)">
+        <mat-icon mat-list-icon>note</mat-icon>
+        <div mat-line>{{ note.name }}</div>
+        <!-- <div mat-line>{{ note.updated | date }}</div> -->
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="content" role="main">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- <button mat-raised-button>Toggle drawer</button> -->
+  </mat-drawer-content>
+</mat-drawer-container>
 <!-- Main content -->
-<div class="content" role="main">
-  <router-outlet></router-outlet>
-</div>
 
 <!-- Footer -->
 <div></div>

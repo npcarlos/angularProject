@@ -21,10 +21,12 @@ export class ArtistDetailsPageComponent implements OnInit {
   ngOnInit(): void {
     window.scrollTo(0, 0);
 
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.artistsStoreService.getArtist(id).subscribe((artist) => (this.artist = artist));
-    }
+    this.route.params.subscribe((params) => {
+      const id = params['id'];
+      if (id) {
+        this.artistsStoreService.getArtist(id).subscribe((artist) => (this.artist = artist));
+      }
+    });
   }
 
   initializeInfoSections() {

@@ -52,11 +52,11 @@ export class ArtistDetailsPageComponent implements OnInit {
               },
               {
                 name: 'Categorías',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Géneros',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Idiomas hablados',
@@ -85,23 +85,23 @@ export class ArtistDetailsPageComponent implements OnInit {
               },
               {
                 name: 'Facebook',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Twitter',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Instagram',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Spotify',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Youtube',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -152,11 +152,11 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: 'Álbums',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'DVD / Video',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -165,15 +165,15 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: 'Youtube channel',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Spotify',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Sound cloud',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -191,7 +191,7 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: 'Youtube channel',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -206,7 +206,7 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: '',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -215,7 +215,7 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: '',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -224,7 +224,7 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: '',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -233,7 +233,7 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: '',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -248,7 +248,7 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: '',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },

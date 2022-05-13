@@ -22,7 +22,7 @@ export const BARS = [
     subtitle: 'Cl. 28a # 16a - 31, Bogotá DC',
     verified_status: VerificationStatus.NON_VERIFIED,
     profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/244617398_4923540201009117_5552524459328911922_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=7wAlPzoDZzIAX8-rZTO&_nc_ht=scontent.fbog4-1.fna&oh=00_AT9Iz5l8CbJPRnq4cjBz3RY2RmEmohmMeW6ME-pohAD9SQ&oe=62622E1D',
+      '/assets/mock_img/ck_profile.jpg',
     photo:
       'https://www.eltiempo.com/files/image_640_428/files/crop/uploads/2018/05/25/5b08ab38c91eb.r_1527466171569.0-0-3000-1503.jpeg',
     description:

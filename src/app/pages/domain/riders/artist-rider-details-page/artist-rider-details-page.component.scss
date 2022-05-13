@@ -55,27 +55,4 @@
 }
 
 .input-list {
-  display: grid;
-  grid-template-columns: 10% 25% 25% 10% 15% 15%;
-  background-color: #f4e297;
-  padding: 10px;
-  align-self: center;
-  padding: 0.5rem;
-  .center {
-    justify-self: center;
-    padding: 0.5rem;
-    align-self: center;
-  }
-  .left {
-    justify-self: left;
-    word-break: break-word;
-    align-self: center;
-    padding: 0.5rem;
-  }
-}
-.header {
-  background-color: #7a260a;
-  font-weight: 700;
-  color: white;
-  justify-self: center;
 }

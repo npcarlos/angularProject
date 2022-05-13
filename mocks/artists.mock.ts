@@ -45,8 +45,7 @@ export const MUSICIANS = [
     name: 'Espiral 7',
     subtitle: 'Música folclórica del caribe',
     verified_status: VerificationStatus.VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/224664002_1373102573074131_5342254193140271114_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=GtMQLsaTJV0AX9gyn6B&_nc_ht=scontent.fbog4-1.fna&oh=00_AT9dg3rIchQoSCW7hyJq7fdOiApSv4YyTAlZxd1P4xBDMw&oe=626157B8',
+    profile_pic: '/assets/mock_img/e7_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/42200156_663783390672723_818545385646587904_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=9267fe&_nc_ohc=lpWgqqFbUAgAX8IRlMw&_nc_ht=scontent.fbog4-1.fna&oh=00_AT_I2rGnl0SRBHAQ77UYyHgq_AKE29jFFJWBGkSqX0VNCg&oe=6283C6B9',
     description:
@@ -58,8 +57,7 @@ export const MUSICIANS = [
     name: 'Yaturubé',
     subtitle: 'La consagración de la salsa',
     verified_status: VerificationStatus.NON_VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/277108883_101577042521230_5956361830794004831_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=in1p8C2ALYYAX9X1he2&_nc_oc=AQnX8J5w0vlRpZs72ZN-DYwEiaPD3iJDbSuQ9udPkFECNTwv5cpj782qFhrlWbYgnfU&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-qaKi1TnOoxIfXiEZukgOpGJSllnyYCuum_v9kcusSqQ&oe=62632AE5',
+    profile_pic: '/assets/mock_img/y_profile.jpg',
     photo: 'http://yaturube.co/images/yaturube-all.png',
     description:
       'Por su destreza y maestría en la interpretación de la Marimba de Chonta, a José Antonio Torres Solís se le conocía como el “Maestro Gualajo” o el “Pianista de la Selva”. La estrecha relación con este instrumento inició desde los 15 años, cuando construyo y diseñó su primera marimba.',
@@ -70,8 +68,7 @@ export const MUSICIANS = [
     name: 'Monsieur Periné',
     subtitle: 'Jazz a la colombiana',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/275385021_519097179581542_6629886561986942727_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=4p8xz6_-UxMAX_hdmPq&_nc_ht=scontent.fbog4-2.fna&oh=00_AT8hOdwUQ0gRi6N3pknP-oLHaS0xtjQqn7PGPUvV5tJzCw&oe=6262E807',
+    profile_pic: '/assets/mock_img/mp_profile.jpg',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/275614531_519096809581579_5012430951205493402_n.png?_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_ohc=AqrVDnVWVQkAX-vAQyA&_nc_ht=scontent.fbog4-2.fna&oh=00_AT-GWqPtkNceUFAL5wmD2Pa9-5LqObhITyN20G60sfEDZA&oe=6262C8BF',
     description: 'Volverte A Ver: https://SML.lnk.to/VolverteaVerPreSave',
@@ -82,8 +79,7 @@ export const MUSICIANS = [
     name: 'La Pacifican Power',
     subtitle: 'Música folclórica del caribe',
     verified_status: VerificationStatus.VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/277668557_390984909697435_1486963973794235757_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=kKnJmwqquGAAX-VNZQv&_nc_ht=scontent.fbog4-1.fna&oh=00_AT868r3JUxMYumc8F7QwTTArR9HYS5kBU5_cPv8iwPio9g&oe=6261CE78',
+    profile_pic: '/assets/mock_img/pp_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/266503585_960763307858159_4188776505461784387_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=e3f864&_nc_ohc=jEfNc5LClw8AX8_ZDUu&_nc_ht=scontent.fbog4-1.fna&oh=00_AT8pqdujS5ctVVyJdxP7Hs8rKLDs4IKAtV2dD8x8WuLgiA&oe=626212E7',
     description: 'La Pacifican Power es un colectivo multidisciplinario donde la música, la gráfica, la fotografía,',
@@ -94,8 +90,7 @@ export const MUSICIANS = [
     name: 'Los Rolling Ruanas',
     subtitle: 'El piano de la selva',
     verified_status: VerificationStatus.NON_VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/272079895_494762828672609_4949414101568830774_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=-wWarcYGJd8AX9tMPMX&_nc_ht=scontent.fbog4-2.fna&oh=00_AT8Nzo7iyy-4MCVv8_lC9HoW7DYk1XQg0DejdseguZSLig&oe=62614BB9',
+    profile_pic: '/assets/mock_img/rr_profile.jpg',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/277531519_539381870877371_8478363398964607965_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=MXh7F3H7Q_0AX91rzRI&_nc_ht=scontent.fbog4-2.fna&oh=00_AT92SBgHooa9uy7Bc9IczdbSR6JSUMa0t0X04Ghp6K4lBg&oe=626282CC',
     description: '"Nueva Tierra" disponible en todas las plataformas. 🎼🎤⚡ https://links.altafonte.com/gwpee2x',
@@ -106,8 +101,7 @@ export const MUSICIANS = [
     name: 'Puerto Candelaria',
     subtitle: 'Just Rockers!',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/246014912_437821854371256_2398747288584152355_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=-Veg-7wAiRsAX_KGU1a&_nc_ht=scontent.fbog4-2.fna&oh=00_AT_oC8POm_7sFl8CcLhw43xofy7m4mXOC_oX0kZ9s3jQ2w&oe=62621D59',
+    profile_pic: '/assets/mock_img/puerto_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/278183153_546981546788619_9164132711833636091_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xldmXqIw_TUAX_8AZZ-&_nc_ht=scontent.fbog4-1.fna&oh=00_AT9dIVAMSWhfV1hhZlfsMiLKDSnjLcBMTmuU1zZTEEAmoQ&oe=6262A4CC',
     description: 'Atrevida, controversial e innovadora agrupación colombiana. Escucha su más reciente lanzamiento: h',
@@ -118,8 +112,7 @@ export const MUSICIANS = [
     name: 'Lunalé',
     subtitle: 'Música folclórica del caribe',
     verified_status: VerificationStatus.VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/277107129_1848862501969805_6336903362939035213_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=a26aad&_nc_ohc=3AOurFr3s34AX82uK29&_nc_ht=scontent.fbog4-2.fna&oh=00_AT-LZa4jiwsx8Qm6sBhqA584nAkUsG1B1cLMmjKOLHmtYw&oe=6262C506',
+    profile_pic: '/assets/mock_img/lunale_profile.jpg',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/277004078_1848862495303139_8032247034811878393_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=a26aad&_nc_ohc=471_U7udyasAX8WgRWK&_nc_ht=scontent.fbog4-2.fna&oh=00_AT-_OcVsgxijBA2-ZanQMfUE_fvZG6rDOmKbMXDcAX6W2g&oe=62629164',
     description: 'Cantante, compositora y artista audiovisual colombiana 🇨🇴 🔥Hoy nada me daña soy de fuego🔥',
@@ -130,7 +123,7 @@ export const MUSICIANS = [
     name: 'Ministerio del beat',
     subtitle: 'El piano de la selva',
     verified_status: VerificationStatus.NON_VERIFIED,
-    profile_pic: 'https://yt3.ggpht.com/ytc/AKedOLT1FbjEvF3nmssCqdFQ5Aao5DwMqdhS8XKQQw8c=s88-c-k-c0x00ffffff-no-rj',
+    profile_pic: '/assets/mock_img/ministerio_profile.jpg',
     photo:
       'https://instagram.fbog4-2.fna.fbcdn.net/v/t51.2885-15/100970951_110867240484909_2099585599527439757_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.fbog4-2.fna.fbcdn.net&_nc_cat=109&_nc_ohc=ylAKsZXWbRIAX_lyFkg&edm=AABBvjUBAAAA&ccb=7-4&oh=00_AT9YJmOZyeHdZeod5LGt5iaiFJt9i9ASKSZ3pEgTDu9yDA&oe=6263C518&_nc_sid=83d603',
     description: 'Mirá nuestra live session 🤯🤯🤯',
@@ -141,8 +134,7 @@ export const MUSICIANS = [
     name: 'La mojarra eléctrica',
     subtitle: 'Just Rockers!',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/278215925_4974824045919090_7503261169342432291_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Hv2Zs4yWf50AX_9JqI8&_nc_ht=scontent.fbog4-1.fna&oh=00_AT9uH7GQ-AfGCT8ZdcC4acDsZpzOw_k5TabydwWzYT4MXA&oe=6261D578',
+    profile_pic: '/assets/mock_img/mojarra_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/277787138_4974890929245735_3371425580665925454_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=e3f864&_nc_ohc=7itzuLfyjuEAX-SpitH&_nc_ht=scontent.fbog4-1.fna&oh=00_AT9Ikie2QxcgAVtnrjid-yMjItKBkk1KCHVNGXuO2ql_3A&oe=6261A287',
     description:
@@ -166,8 +158,7 @@ export const MUSICIANS = [
     name: 'Gregorio Uribe',
     subtitle: 'El piano de la selva',
     verified_status: VerificationStatus.NON_VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/278371177_528702878814209_3982791882156233999_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=KgP0CmQFGQ0AX87R2tx&_nc_ht=scontent.fbog4-2.fna&oh=00_AT_6cIZ_wI4UamonHvNCs301fTtuHgYgkjaelvQHNr3PLQ&oe=6261CF79',
+    profile_pic: '/assets/mock_img/gregorio_profile.jpg',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/128717110_207825330901967_3422551406528486021_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=R7DLNH1yPqQAX9fstEm&_nc_oc=AQmk71PuWuXKXLeqkRS4IMBasrrVe1sd9eLvJz3Yq_K9RjmvfUQFxAg-mRxCfI3SEbA&_nc_ht=scontent.fbog4-2.fna&oh=00_AT84EJsXwUAxYgPW2r4hf3g0csDMZKjAeh-66sMC6gHIuA&oe=62821D06',
     description: 'Cantautor y acordeonista que ha llevado sus canciones a Carnegie Hall y a los Montes de María.',
@@ -178,8 +169,7 @@ export const MUSICIANS = [
     name: 'Sonoras Mil',
     subtitle: 'Just Rockers!',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/272634040_342497151214273_3507243037439906935_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=fylAGqzzvBAAX-cL2Sw&_nc_ht=scontent.fbog4-2.fna&oh=00_AT9tnIiDNTFnzcd7jEXzv3WhLc33P1KDb6nz_3fyr1jCdw&oe=62633235',
+    profile_pic: '/assets/mock_img/sm_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/261773718_302960765167912_6641917123524383911_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=sPHMlM4H8R0AX-iwVHd&_nc_ht=scontent.fbog4-1.fna&oh=00_AT_xB4FN64bMeujI1X0VnzOLEE2iPBqcXp0hKm2BkGN1CA&oe=6262E4A7',
     description: 'Sonoras mil is the project of Colombian musician Felipe Gómez Ossa. The music is a fresh mix of Dub',
@@ -202,8 +192,7 @@ export const MUSICIANS = [
     name: 'Los Cañaverales del Bohío',
     subtitle: 'El piano de la selva',
     verified_status: VerificationStatus.NON_VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/215279115_532553281490534_4573711611592225503_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=HXf70zDR9QoAX8LmAiI&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-EK3nWJTgXkjYrOO_YGCcJKgP1D998dnYiAX6buvyP8A&oe=6261C3F9',
+    profile_pic: '/assets/mock_img/canaverales_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/87980186_188717699207429_7353951396300849152_n.jpg?stp=dst-jpg_p180x540&_nc_cat=106&ccb=1-5&_nc_sid=e3f864&_nc_ohc=7UkzZU3FItIAX-YYGjo&_nc_ht=scontent.fbog4-1.fna&oh=00_AT8mkqO2fJy2xvbfhu7wc8rJtUZOvFomQBP5iVrg45DQzA&oe=62846344',
     description:

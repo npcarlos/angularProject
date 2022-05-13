@@ -1,7 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ArtistRiderModel } from 'src/app/domain/riders/rider';
+import { TableFieldTemplate } from 'src/app/components/common-ui/atoms/table/table.component';
+import { ArtistRiderModel, CrewMemberTemplate, CrewTeamTemplate } from 'src/app/domain/riders/rider';
 import { ArtistRidersStoreServiceService } from 'src/app/services/riders/artist-riders-store-service.service';
+
+export const CrewRoles: { name: string; title: string }[] = [
+  { name: 'artists', title: 'Artistas' },
+  { name: 'managers', title: 'Managers' },
+  { name: 'engineers', title: 'Ingenieros' },
+  { name: 'roadies', title: 'Roadies' },
+  { name: 'security', title: 'Seguridad' },
+  { name: 'others', title: 'Otros' },
+];
 
 @Component({
   selector: 'app-artist-rider-details-page',
@@ -9,9 +19,16 @@ import { ArtistRidersStoreServiceService } from 'src/app/services/riders/artist-
   styleUrls: ['./artist-rider-details-page.component.scss'],
 })
 export class ArtistRiderDetailsPageComponent implements OnInit {
+  get CrewRoles() {
+    return CrewRoles;
+  }
+
   rider: ArtistRiderModel;
   subpages: any = [];
   currentSubpage: any;
+
+  inputListTableFields: TableFieldTemplate[] = [];
+  roamingListTableFields: TableFieldTemplate[] = [];
 
   constructor(private route: ActivatedRoute, private artistsRidersStoreService: ArtistRidersStoreServiceService) {
     this.initializeInfoSections();
@@ -24,7 +41,9 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
       const artistId = params['artistId'];
       const riderId = params['riderId'];
       if (artistId && riderId) {
-        this.artistsRidersStoreService.getRider(artistId, riderId).subscribe((rider) => (this.rider = rider));
+        this.artistsRidersStoreService.getRider(artistId, riderId).subscribe((rider) => {
+          this.rider = rider;
+        });
       }
     });
   }
@@ -52,11 +71,11 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
               },
               {
                 name: 'Categorías',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Géneros',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Idiomas hablados',
@@ -85,23 +104,23 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
               },
               {
                 name: 'Facebook',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Twitter',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Instagram',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Spotify',
-                icon: 'pets',
+                icon: 'info',
               },
               {
                 name: 'Youtube',
-                icon: 'pets',
+                icon: 'info',
               },
             ],
           },
@@ -144,111 +163,43 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
         ],
       },
       {
-        name: 'input-list',
-        title: 'Input List',
-        sections: [
-          {
-            title: 'Discografía',
-            attributes: [
-              {
-                name: 'Álbums',
-                icon: 'pets',
-              },
-              {
-                name: 'DVD / Video',
-                icon: 'pets',
-              },
-            ],
-          },
-          {
-            title: 'Media channels',
-            attributes: [
-              {
-                name: 'Youtube channel',
-                icon: 'pets',
-              },
-              {
-                name: 'Spotify',
-                icon: 'pets',
-              },
-              {
-                name: 'Sound cloud',
-                icon: 'pets',
-              },
-            ],
-          },
-          {
-            title: 'Galería',
-            attributes: [
-              {
-                name: 'Fotos',
-                icon: 'photo',
-              },
-            ],
-          },
-          {
-            title: 'Live perfomances',
-            attributes: [
-              {
-                name: 'Youtube channel',
-                icon: 'pets',
-              },
-            ],
-          },
-        ],
+        name: 'people',
+        title: 'Personal',
+        sections: [],
       },
       {
         name: 'requirements',
-        title: 'Stage plot',
-        sections: [
-          {
-            title: 'Instrumentación',
-            attributes: [
-              {
-                name: '',
-                icon: 'pets',
-              },
-            ],
-          },
-          {
-            title: 'Iluminación',
-            attributes: [
-              {
-                name: '',
-                icon: 'pets',
-              },
-            ],
-          },
-          {
-            title: 'Audiovisual',
-            attributes: [
-              {
-                name: '',
-                icon: 'pets',
-              },
-            ],
-          },
-          {
-            title: 'Escenografía',
-            attributes: [
-              {
-                name: '',
-                icon: 'pets',
-              },
-            ],
-          },
-        ],
+        title: 'Requerimientos Técnicos',
+        sections: [],
+      },
+      {
+        name: 'backline',
+        title: 'Backline',
+        sections: [],
+      },
+      {
+        name: 'soundcheck',
+        title: 'Prueba de sonido',
+        sections: [],
       },
     ];
-    this.currentSubpage = this.subpages[0];
+
+    this.currentSubpage = this.subpages[1];
   }
 
   setCurrentSubpage(newSubpage: any) {
     this.currentSubpage = newSubpage;
-    console.log(newSubpage);
   }
   getData(attribute: string) {
     // return this.artist[attribute as keyof ArtistModel] || 'jdfhkjdshfs';
     return 'No disponible';
+  }
+
+  get crewMemberRoles() {
+    return CrewRoles.filter((role) => !!this.rider.crewList[role.name as keyof CrewTeamTemplate]);
+  }
+
+  crewMembersByRole(roleName: string): CrewMemberTemplate[] {
+    return this.rider.crewList[roleName as keyof typeof this.rider.crewList] || [];
   }
 }

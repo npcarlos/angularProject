@@ -1,36 +1,10 @@
 <div *ngIf="rider">
+  <p><- Mis riders</p>
   <h1>{{ rider.name }}</h1>
   <div class="full-content">
-    <app-tab-panel [subpages]="subpages"></app-tab-panel>
-    <p>----------------------</p>
-    <h2>Input list</h2>
-    <div class="input-list center header">
-      <div class="grid-item center">Canal</div>
-      <div class="grid-item center">Instr.</div>
-      <div class="grid-item center">Mic / DI</div>
-      <div class="grid-item center">Stand</div>
-      <div class="grid-item center">Ins. Mon</div>
-      <div class="grid-item center">Ins. FOH</div>
-    </div>
-    <div class="input-list" *ngFor="let inputItem of rider.inputList">
-      <div class="grid-item center">{{ inputItem.channelNumber }}</div>
-      <div class="grid-item left">{{ inputItem.instrumentName }}</div>
-      <div class="grid-item left">{{ inputItem.microphone }}</div>
-      <div class="grid-item center">{{ inputItem.stand }}</div>
-      <div class="grid-item left">{{ inputItem.inserts }}</div>
-      <div class="grid-item left">{{ inputItem.inserts }}</div>
-    </div>
-    <p>------------------</p>
-    <div class="subpages-tabs">
-      <div *ngFor="let subpage of subpages">
-        <div class="subpage-tab" (click)="setCurrentSubpage(subpage)">
-          <h5>
-            {{ subpage.title }}
-          </h5>
-        </div>
-      </div>
-    </div>
-    <div *ngIf="currentSubpage">
+    <app-tab-panel [subpages]="subpages" (onTabClicked)="setCurrentSubpage($event)"></app-tab-panel>
+    <div *ngIf="currentSubpage?.name === 'general'">
+      <h2>Información general</h2>
       <div *ngFor="let section of currentSubpage.sections">
         <h2 class="section-title">{{ section.title }}</h2>
         <div class="attribute" *ngFor="let attribute of section.attributes">
@@ -38,6 +12,61 @@
           <p>{{ attribute.name }}: {{ getData(attribute.name) }}</p>
         </div>
       </div>
+    </div>
+
+    <div *ngIf="currentSubpage?.name === 'people'">
+      <h2>Personal</h2>
+      <h3>Equipo humano</h3>
+      <div *ngFor="let role of crewMemberRoles">
+        <h4>{{ role.title }}</h4>
+        <ul>
+          <li *ngFor="let person of crewMembersByRole(role.name)">
+            <p>
+              <strong>
+                {{ person.name }}
+              </strong>
+              ({{ person.document_type }} {{ person.document_number }})
+            </p>
+            <p>{{ person.role }}</p>
+          </li>
+        </ul>
+      </div>
+      <h3>Rooming List</h3>
+      <app-table></app-table>
+      <h3>Flying List</h3>
+      <app-table></app-table>
+      <h3>Transporte</h3>
+      <h4>Vehículos propios</h4>
+      <h4>Vehículos externos</h4>
+    </div>
+    <div *ngIf="currentSubpage?.name === 'backline'">
+      <h3>Backline propio</h3>
+      <h3>Backline externo</h3>
+    </div>
+    <div *ngIf="currentSubpage?.name === 'requirements'">
+      <h2>Puesta en escena</h2>
+      <h3>Stage plot</h3>
+      <h4>Vista frontal</h4>
+      <h4>Vista Cenital</h4>
+      <h3>Tarimas y estructuras</h3>
+      <h4>Tarimas</h4>
+      <h4>Sobretarimas</h4>
+      <h4>Estructuras</h4>
+      <h4>Techos</h4>
+      <h4>HouseMix</h4>
+      <h2>Requerimientos de audio</h2>
+      <h3>Input list</h3>
+      <app-table></app-table>
+      <h3>Mezclas y monitoreo</h3>
+      <app-table></app-table>
+      <h2>Requerimientos de video</h2>
+      <h2>Requerimientos de iluminación</h2>
+      <h2>Efectos especiales</h2>
+    </div>
+    <div *ngIf="currentSubpage?.name === 'hospitality'">
+      <h3>Camerinos</h3>
+      <h3>Input list</h3>
+      <app-table></app-table>
     </div>
   </div>
 </div>

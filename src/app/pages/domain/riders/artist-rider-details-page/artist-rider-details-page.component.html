@@ -32,9 +32,9 @@
         </ul>
       </div>
       <h3>Rooming List</h3>
-      <app-table></app-table>
+      <app-table [fields]="roomingListTableFields"></app-table>
       <h3>Flying List</h3>
-      <app-table></app-table>
+      <app-table [fields]="flyingListTableFields"></app-table>
       <h3>Transporte</h3>
       <h4>Vehículos propios</h4>
       <h4>Vehículos externos</h4>
@@ -44,6 +44,14 @@
       <h3>Backline externo</h3>
     </div>
     <div *ngIf="currentSubpage?.name === 'requirements'">
+      <h2>Requerimientos técnicos</h2>
+      <ul>
+        <li>Puesta en escena</li>
+        <li>Requerimientos de audio</li>
+        <li>Requerimientos de video</li>
+        <li>Requerimientos de iluminación</li>
+        <li>Efectos especiales</li>
+      </ul>
       <h2>Puesta en escena</h2>
       <h3>Stage plot</h3>
       <h4>Vista frontal</h4>
@@ -56,9 +64,9 @@
       <h4>HouseMix</h4>
       <h2>Requerimientos de audio</h2>
       <h3>Input list</h3>
-      <app-table></app-table>
+      <app-table [fields]="inputListTableFields" [elements]="rider.inputList"></app-table>
       <h3>Mezclas y monitoreo</h3>
-      <app-table></app-table>
+      <app-table [fields]="mixesListTableFields"></app-table>
       <h2>Requerimientos de video</h2>
       <h2>Requerimientos de iluminación</h2>
       <h2>Efectos especiales</h2>

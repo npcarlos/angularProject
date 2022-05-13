@@ -28,7 +28,9 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
   currentSubpage: any;
 
   inputListTableFields: TableFieldTemplate[] = [];
-  roamingListTableFields: TableFieldTemplate[] = [];
+  mixesListTableFields: TableFieldTemplate[] = [];
+  roomingListTableFields: TableFieldTemplate[] = [];
+  flyingListTableFields: TableFieldTemplate[] = [];
 
   constructor(private route: ActivatedRoute, private artistsRidersStoreService: ArtistRidersStoreServiceService) {
     this.initializeInfoSections();
@@ -184,6 +186,29 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
       },
     ];
 
+    this.inputListTableFields = [
+      { title: 'Canal', fieldName: 'channelNumber', alignment: 'center' },
+      { title: 'Instr.', fieldName: 'instrumentName', alignment: 'left' },
+      { title: 'Mic / DI', fieldName: 'microphone', alignment: 'left' },
+      { title: 'Stand', fieldName: 'stand', alignment: 'center' },
+      { title: 'Ins. Mon', fieldName: 'inserts', alignment: 'left' },
+      { title: 'Ins. FOH', fieldName: 'inserts', alignment: 'left' },
+    ];
+    this.mixesListTableFields = [
+      { title: 'Mix', fieldName: 'mix', alignment: 'center' },
+      { title: 'Descripción', fieldName: 'description', alignment: 'left' },
+      { title: 'Nota', fieldName: 'notes', alignment: 'left' },
+      { title: 'EQ', fieldName: 'eq', alignment: 'center' },
+    ];
+
+    this.roomingListTableFields = [
+      { title: 'Req. Habitación', fieldName: 'mix', alignment: 'center' },
+      { title: 'Crew members', fieldName: 'description', alignment: 'left' },
+    ];
+    this.flyingListTableFields = [
+      { title: 'Req. Habitación', fieldName: 'mix', alignment: 'center' },
+      { title: 'Crew members', fieldName: 'description', alignment: 'left' },
+    ];
     this.currentSubpage = this.subpages[1];
   }
 

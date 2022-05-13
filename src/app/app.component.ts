@@ -20,6 +20,11 @@ export class AppComponent implements OnInit {
 
   notes: Section[] = [
     {
+      name: 'Home',
+      path: '',
+      updated: new Date('2/20/16'),
+    },
+    {
       name: 'Mi banda',
       path: 'artist',
       updated: new Date('2/20/16'),
@@ -47,8 +52,12 @@ export class AppComponent implements OnInit {
 
   clickSideMenu(section: Section) {
     let path = section.path;
-    const itemId = Math.round(Math.random() * 14);
-    this.router.navigate([`/${path}/${itemId}`]);
+    if (!!path) {
+      const itemId = Math.floor(Math.random() * 18) + 1;
+      this.router.navigate([`/${path}/${itemId}`]);
+    } else {
+      this.router.navigate([`/`]);
+    }
     this.drawer.close();
   }
 }

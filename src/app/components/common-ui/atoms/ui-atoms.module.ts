@@ -5,10 +5,11 @@ import { EntityCardComponent } from './entity-card/entity-card.component';
 import { SlideGalleryComponent } from './slide-gallery/slide-gallery.component';
 import { VerificationSignComponent } from './verification-sign/verification-sign.component';
 import { MatCardModule } from '@angular/material/card';
+import { TabPanelModule } from './tab-panel/tab-panel.module';
 
 @NgModule({
   declarations: [EntityCardComponent, SlideGalleryComponent, VerificationSignComponent],
   imports: [CommonModule, MatIconModule, MatCardModule],
-  exports: [EntityCardComponent, SlideGalleryComponent, VerificationSignComponent],
+  exports: [EntityCardComponent, SlideGalleryComponent, TabPanelModule, VerificationSignComponent],
 })
 export class UIAtomsModule {}

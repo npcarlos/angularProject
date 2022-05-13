@@ -1,0 +1,13 @@
+<div class="full-content">
+  <div class="subpages-tabs">
+    <div *ngFor="let subpage of subpages">
+      <div class="subpage-tab" (click)="setCurrentSubpage(subpage)">
+        <h5>
+          {{ subpage.title }}
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="currentSubpage"><ng-template subpageHost></ng-template></div>
+</div>

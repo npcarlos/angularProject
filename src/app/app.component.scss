@@ -59,7 +59,7 @@ p {
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
+  margin: 1rem auto 32px;
   padding: 0 16px;
   max-width: 960px;
   flex-direction: column;
@@ -322,6 +322,10 @@ mat-drawer {
 mat-toolbar {
   background-color: #efe5b0;
   color: #7a260a;
+}
+
+mat-drawer-content {
+  min-height: 50rem;
 }
 
 .mat-drawer:not(.mat-drawer-side) {

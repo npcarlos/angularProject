@@ -13,10 +13,13 @@ export interface TableFieldTemplate {
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-  @Input() headers: TableFieldTemplate[] = [];
-  @Input() rows: any[] = [];
+  @Input() fields: TableFieldTemplate[] = [];
+  @Input() elements: any[] = [];
+  rendered_elements: string[][] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.rendered_elements = this.elements.map((element) => this.fields.map((field) => element[field.fieldName]));
+  }
 }

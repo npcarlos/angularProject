@@ -1,0 +1,55 @@
+:host {
+  width: 100%;
+}
+.profile-header {
+  display: flex;
+
+  .avatar {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    margin: 0.5rem;
+  }
+  .header-title {
+    margin: 1.2rem;
+    h2 {
+      font-family: Roboto, 'Helvetica Neue', sans-serif;
+      color: #333;
+    }
+
+    .artist-name {
+      display: flex;
+    }
+  }
+}
+.full-content {
+  text-align: justify;
+  .subpages-tabs {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .subpage-tab {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-right: 2px solid #7a260a;
+    h5 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .section-title {
+    border-bottom: 1px solid #7a260a;
+    margin-top: 2rem;
+  }
+}
+
+.attribute {
+  display: flex;
+}
+.attribute-icon {
+  color: #7a260a;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,43 @@
+<div *ngIf="rider">
+  <h1>{{ rider.name }}</h1>
+  <div class="full-content">
+    <app-tab-panel [subpages]="subpages"></app-tab-panel>
+    <p>----------------------</p>
+    <h2>Input list</h2>
+    <div class="input-list center header">
+      <div class="grid-item center">Canal</div>
+      <div class="grid-item center">Instr.</div>
+      <div class="grid-item center">Mic / DI</div>
+      <div class="grid-item center">Stand</div>
+      <div class="grid-item center">Ins. Mon</div>
+      <div class="grid-item center">Ins. FOH</div>
+    </div>
+    <div class="input-list" *ngFor="let inputItem of rider.inputList">
+      <div class="grid-item center">{{ inputItem.channelNumber }}</div>
+      <div class="grid-item left">{{ inputItem.instrumentName }}</div>
+      <div class="grid-item left">{{ inputItem.microphone }}</div>
+      <div class="grid-item center">{{ inputItem.stand }}</div>
+      <div class="grid-item left">{{ inputItem.inserts }}</div>
+      <div class="grid-item left">{{ inputItem.inserts }}</div>
+    </div>
+    <p>------------------</p>
+    <div class="subpages-tabs">
+      <div *ngFor="let subpage of subpages">
+        <div class="subpage-tab" (click)="setCurrentSubpage(subpage)">
+          <h5>
+            {{ subpage.title }}
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="currentSubpage">
+      <div *ngFor="let section of currentSubpage.sections">
+        <h2 class="section-title">{{ section.title }}</h2>
+        <div class="attribute" *ngFor="let attribute of section.attributes">
+          <mat-icon class="attribute-icon">{{ attribute.icon }}</mat-icon>
+          <p>{{ attribute.name }}: {{ getData(attribute.name) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

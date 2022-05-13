@@ -47,9 +47,11 @@
 
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
   <mat-drawer #drawer [mode]="'over'">
+    <h1>Artists Hive</h1>
+    <h4>Menú Principal</h4>
     <mat-list>
       <!-- <mat-divider></mat-divider> -->
-      <div mat-subheader>Herramientas</div>
+      <!-- <div mat-subheader>Herramientas</div> -->
       <mat-list-item *ngFor="let note of notes" (click)="clickSideMenu(note)">
         <mat-icon mat-list-icon>note</mat-icon>
         <div mat-line>{{ note.name }}</div>

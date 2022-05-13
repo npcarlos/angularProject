@@ -99,20 +99,32 @@ export const ARTIST_RIDERS = [
         microphone: 'Shure Sm 58',
         inserts: 'COMP/GATE/RV',
       },
-      {
-        channelNumber: 16,
-        instrumentName: '',
-        microphone: '',
-        inserts: '',
-      },
-      {
-        channelNumber: 17,
-        instrumentName: '',
-        microphone: '',
-        inserts: '',
-      },
     ],
     stageSpecs: { height: 2, length: 2, width: 4, unitMeasure: 'mts' },
+    crewList: {
+      artists: [
+        { name: 'Carlos Valencia', role: 'Director & voz líder', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Gloria Martínez', role: 'Voz líder', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Miguel Martínez', role: 'Voz líder & secuencias', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Larry Viveros Ararat', role: 'Percusionista', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Alexander Sánchez', role: 'Bajista', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Milton Jurado Restrepo', role: 'Guitarrista', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Andrés Zea', role: 'Baterista', document_type: 'CC', document_number: '1234566789' },
+      ],
+      engineers: [
+        {
+          name: 'Carlos Alberto Rodríguez',
+          role: 'Ing. Sonido FOH',
+          document_type: 'CC',
+          document_number: '1234566789',
+        },
+        { name: 'Edison Fagua', role: 'Ing. Sonido MON', document_type: 'CC', document_number: '1234566789' },
+      ],
+      managers: [
+        { name: 'Alexander Farigua', role: 'Stage manager', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Ricardo Leyva P.', role: 'Booking agent', document_type: 'CC', document_number: '1234566789' },
+      ],
+    },
   }),
   new ArtistRiderModel({
     artistId: '',
@@ -212,19 +224,32 @@ export const ARTIST_RIDERS = [
         microphone: 'Shure Sm 58',
         inserts: 'COMP/GATE/RV',
       },
-      {
-        channelNumber: 16,
-        instrumentName: '',
-        microphone: '',
-        inserts: '',
-      },
-      {
-        channelNumber: 17,
-        instrumentName: '',
-        microphone: '',
-        inserts: '',
-      },
     ],
+    crewList: {
+      artists: [
+        { name: 'Carlos Valencia', role: 'Cantante', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Gloria Martínez', role: 'Trompeta', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Miguel Martínez', role: 'Flauta', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Larry Viveros Ararat', role: 'Percusionista', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Alexander Sánchez', role: 'Bajista', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Milton Jurado Restrepo', role: 'Guitarrista', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Andrés Zea', role: 'Baterista', document_type: 'CC', document_number: '1234566789' },
+      ],
+      engineers: [
+        {
+          name: 'Carlos Alberto Rodríguez',
+          role: 'Ing. Sonido FOH',
+          document_type: 'CC',
+          document_number: '1234566789',
+        },
+        { name: 'Edison Fagua', role: 'Ing. Sonido MON', document_type: 'CC', document_number: '1234566789' },
+      ],
+      managers: [
+        { name: 'Alexander Farigua', role: 'Stage manager', document_type: 'CC', document_number: '1234566789' },
+        { name: 'Ricardo Leyva P.', role: 'Booking agent', document_type: 'CC', document_number: '1234566789' },
+      ],
+      security: [{ name: 'Juan Pérez', role: 'Security agent', document_type: 'CC', document_number: '1234566789' }],
+    },
     stageSpecs: { height: 2, length: 2, width: 4, unitMeasure: 'mts' },
   }),
 ];

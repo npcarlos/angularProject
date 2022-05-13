@@ -35,8 +35,8 @@ export class AppComponent implements OnInit {
       updated: new Date('2/20/16'),
     },
     {
-      name: 'Mis Tours',
-      path: 'tours',
+      name: 'Próximos eventos',
+      path: 'events',
       updated: new Date('1/18/16'),
     },
   ];

@@ -2,6 +2,8 @@
 
 A continuación encontrarás tus riders técnicos.
 
-<div *ngFor="let rider of riders">
-  <p (click)="riderClicked(rider)">{{ rider.name }}</p>
-</div>
+<ul>
+  <li class="rider" *ngFor="let rider of riders">
+    <div (click)="riderClicked(rider)">{{ rider.name }}</div>
+  </li>
+</ul>

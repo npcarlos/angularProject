@@ -42,7 +42,7 @@ export class EntityCardComponent implements OnInit {
   @Input() item: ArtistModel;
   @Input() entityCardParams: EntityCardParams;
 
-  @Output() onCardClick: EventEmitter<EntityCardEvent> = new EventEmitter<EntityCardEvent>();
+  @Output() onCardClicked: EventEmitter<EntityCardEvent> = new EventEmitter<EntityCardEvent>();
 
   profile_pic: string;
   title: string;
@@ -126,7 +126,7 @@ export class EntityCardComponent implements OnInit {
       (eventSource === EntityCardEventSource.MAIN_PHOTO && !this.entityCardParams.isMainPhotoClickleable);
 
     if (!refuseEmit) {
-      this.onCardClick.emit({ eventSource, item: this.item });
+      this.onCardClicked.emit({ eventSource, item: this.item });
     }
   }
 }

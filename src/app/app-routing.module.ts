@@ -5,12 +5,16 @@ import { ArtistsListPageComponent } from './pages/domain/artists/artists-list-pa
 import { ErrorPageComponent } from './pages/common/error-page/error-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PlaceDetailsPageComponent } from './pages/domain/places/place-details-page/place-details-page.component';
+import { ArtistRidersListPageComponent } from './pages/domain/riders/artist-riders-list-pages/artist-riders-list-page.component';
+import { ArtistRiderDetailsPageComponent } from './pages/domain/riders/artist-rider-details-page/artist-rider-details-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'artists', component: ArtistsListPageComponent },
   { path: 'artist/:id', component: ArtistDetailsPageComponent },
   { path: 'place/:id', component: PlaceDetailsPageComponent },
+  { path: 'riders/:artistId', component: ArtistRidersListPageComponent },
+  { path: 'riders/:artistId/:riderId', component: ArtistRiderDetailsPageComponent },
   { path: '**', component: ErrorPageComponent },
 ];
 

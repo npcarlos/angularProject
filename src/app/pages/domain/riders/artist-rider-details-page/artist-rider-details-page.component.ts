@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ArtistModel } from 'src/app/domain/artists/artist';
-import { ArtistsStoreServiceService } from 'src/app/services/artists/artists-store-service.service';
+import { ArtistRiderModel } from 'src/app/domain/riders/rider';
+import { ArtistRidersStoreServiceService } from 'src/app/services/riders/artist-riders-store-service.service';
 
 @Component({
-  selector: 'app-artist-details-page',
-  templateUrl: './artist-details-page.component.html',
-  styleUrls: ['./artist-details-page.component.scss'],
+  selector: 'app-artist-rider-details-page',
+  templateUrl: './artist-rider-details-page.component.html',
+  styleUrls: ['./artist-rider-details-page.component.scss'],
 })
-export class ArtistDetailsPageComponent implements OnInit {
-  artist: ArtistModel;
-
+export class ArtistRiderDetailsPageComponent implements OnInit {
+  rider: ArtistRiderModel;
   subpages: any = [];
   currentSubpage: any;
 
-  constructor(private route: ActivatedRoute, private artistsStoreService: ArtistsStoreServiceService) {
+  constructor(private route: ActivatedRoute, private artistsRidersStoreService: ArtistRidersStoreServiceService) {
     this.initializeInfoSections();
   }
 
@@ -22,9 +21,10 @@ export class ArtistDetailsPageComponent implements OnInit {
     window.scrollTo(0, 0);
 
     this.route.params.subscribe((params) => {
-      const id = params['id'];
-      if (id) {
-        this.artistsStoreService.getArtist(id).subscribe((artist) => (this.artist = artist));
+      const artistId = params['artistId'];
+      const riderId = params['riderId'];
+      if (artistId && riderId) {
+        this.artistsRidersStoreService.getRider(artistId, riderId).subscribe((rider) => (this.rider = rider));
       }
     });
   }
@@ -144,8 +144,8 @@ export class ArtistDetailsPageComponent implements OnInit {
         ],
       },
       {
-        name: 'arts',
-        title: 'Artes',
+        name: 'input-list',
+        title: 'Input List',
         sections: [
           {
             title: 'Discografía',
@@ -199,7 +199,7 @@ export class ArtistDetailsPageComponent implements OnInit {
       },
       {
         name: 'requirements',
-        title: 'Escena',
+        title: 'Stage plot',
         sections: [
           {
             title: 'Instrumentación',
@@ -239,21 +239,6 @@ export class ArtistDetailsPageComponent implements OnInit {
           },
         ],
       },
-      {
-        name: 'requirements',
-        title: 'Social',
-        sections: [
-          {
-            title: 'Comentarios',
-            attributes: [
-              {
-                name: '',
-                icon: 'pets',
-              },
-            ],
-          },
-        ],
-      },
     ];
     this.currentSubpage = this.subpages[0];
   }
@@ -263,6 +248,7 @@ export class ArtistDetailsPageComponent implements OnInit {
     console.log(newSubpage);
   }
   getData(attribute: string) {
-    return this.artist[attribute as keyof ArtistModel] || 'No disponible';
+    // return this.artist[attribute as keyof ArtistModel] || 'jdfhkjdshfs';
+    return 'No disponible';
   }
 }

@@ -12,7 +12,7 @@ export class ArtistsStoreServiceService {
 
   getArtists(params: { limit?: number } = {}): Observable<ArtistModel[]> {
     const artists = [...ARTISTS] || [];
-
+    console.log(artists.length);
     const limit = params.limit || artists.length;
 
     const limited = [];

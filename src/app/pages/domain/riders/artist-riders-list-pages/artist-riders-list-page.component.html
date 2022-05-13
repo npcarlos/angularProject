@@ -1,0 +1,7 @@
+<h1>Riders técnicos</h1>
+
+A continuación encontrarás tus riders técnicos.
+
+<div *ngFor="let rider of riders">
+  <p (click)="riderClicked(rider)">{{ rider.name }}</p>
+</div>

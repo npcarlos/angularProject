@@ -32,8 +32,7 @@ export const MUSICIANS = [
     name: 'Bluefinch & The Wanderlust',
     subtitle: 'Just Rockers!',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/95703470_111763943853759_411293644587270144_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=ZeWIdUp-cfIAX-JSXnD&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-Hxw62635Unb43GPybpJiOeWP13JH7_lq56JqsafifIA&oe=628024C8',
+    profile_pic: './assets/mock_img/bf_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/196750348_335743828122435_8635650371587580230_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=NdWgL11xdpYAX8yYrtO&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-1XET9IkNFK-__GKmu1sR2X1fryCb1hEOciRe6fk5UCA&oe=627F9283',
     description:
@@ -146,8 +145,7 @@ export const MUSICIANS = [
     name: 'Pacífico Libre',
     subtitle: 'Música folclórica del caribe',
     verified_status: VerificationStatus.VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/165268215_135038958625707_456488731288503824_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=D2tTGSLqVw4AX_miF0Y&_nc_ht=scontent.fbog4-2.fna&oh=00_AT-AsrCtiMUdOnp2QES3ElWYAk7Xa1R7DARuIlZ3yOXu_g&oe=6283D4FF',
+    profile_pic: './assets/mock_img/pl_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/168911343_135038951959041_679467350257684206_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=hpsBfe-53L8AX-r7P1Q&_nc_ht=scontent.fbog4-1.fna&oh=00_AT_GTHB8YcALshITOqjMDkIIy2si_HUq3xXjUHPYaYfVQA&oe=62840223',
     description: 'La agrupación Pacifico libre tiene un profundo compromiso con la difusión cultural y se ha enfocad',
@@ -180,8 +178,7 @@ export const MUSICIANS = [
     name: 'La 33',
     subtitle: 'Música folclórica del caribe',
     verified_status: VerificationStatus.VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/128943694_219093032914857_1037445509542433596_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=4OgbBbTUlc4AX8wr6Xf&_nc_ht=scontent.fbog4-2.fna&oh=00_AT_6BcCI7C31ecMg9SYAkZF_DkGSC1pXQ2eUkvXVvK0xMQ&oe=6282A8B2',
+    profile_pic: './assets/mock_img/33_profile.jpg',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/128763848_219093026248191_8918693391327890464_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=e3f864&_nc_ohc=TDrkkVZCX8sAX9uEJVV&_nc_ht=scontent.fbog4-2.fna&oh=00_AT_3QU4WBffL6-ucYEGAhrkycWcgRgwRINBzIGhq7LfrYA&oe=62838421',
     description: 'Salsa, boogaloo, Funk, jazz and folk. https://linkr.bio/la-33',
@@ -204,8 +201,7 @@ export const MUSICIANS = [
     name: 'LauraMare',
     subtitle: 'Just Rockers!',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/73278417_2716468448448233_2860679859607175168_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=fWqYC2kgzyMAX-omNFY&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-9_mk-JuKPRe0FQd1R-IT0aT67y3zu49OMwiWovYBPmQ&oe=628174B2',
+    profile_pic: './assets/mock_img/lm_profile.jpg',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/70714531_2568190899942656_4171314942735024128_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=e3f864&_nc_ohc=2h0EqkH2Pc4AX86x7Is&_nc_ht=scontent.fbog4-2.fna&oh=00_AT9Okj0IkPZqwrSHR5vbAZxQxqOZSJrlZMNHjvj7A0cSSA&oe=62810600',
     description:

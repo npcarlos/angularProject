@@ -8,8 +8,7 @@ export const BARS = [
     name: 'Matik - Matik',
     subtitle: 'Cra 11 # 67 - 20, Bogotá DC',
     verified_status: VerificationStatus.VERIFIED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.18169-1/580260_10151616056439521_980852814_n.png?stp=c41.41.509.509a_dst-png&_nc_cat=101&ccb=1-5&_nc_sid=1eb0c7&_nc_ohc=mkWHtWi0DZMAX-Fa5_-&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-z-Vh0V5CZE8YwMBugY5cNmTQjovUNzShFdxbYdNCQ1Q&oe=6283CD4F',
+    profile_pic: './assets/mock_img/mm_profile.png',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/103692966_10158480139524521_1314928447462667274_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=e3f864&_nc_ohc=H1BTGqxYLxUAX-qLLTw&_nc_ht=scontent.fbog4-2.fna&oh=00_AT9jEk3fWc8lGE10OBZaP3_UC7YTKYSjJjfRNkn3BM55tw&oe=6284015D',
     description:
@@ -45,8 +44,7 @@ export const BARS = [
     name: 'Disco Jaguar',
     subtitle: 'Ak. 7 # 59-30, Bogotá DC',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/83929542_1085080858505969_4376364760279547904_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=CQb35c5gr6cAX9fxPcd&_nc_ht=scontent.fbog4-1.fna&oh=00_AT8QQ5vlVQ4luXIJLYD-E2XRQnybYar_6hUe5s-FETpZwQ&oe=6281D9B5',
+    profile_pic: './assets/mock_img/dj_profile.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/196750348_335743828122435_8635650371587580230_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=NdWgL11xdpYAX8yYrtO&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-1XET9IkNFK-__GKmu1sR2X1fryCb1hEOciRe6fk5UCA&oe=627F9283',
     description:

@@ -21,8 +21,7 @@ export const BARS = [
     name: 'Casa Kilele',
     subtitle: 'Cl. 28a # 16a - 31, Bogotá DC',
     verified_status: VerificationStatus.NON_VERIFIED,
-    profile_pic:
-      '/assets/mock_img/ck_profile.jpg',
+    profile_pic: './assets/mock_img/ck_profile.jpg',
     photo:
       'https://www.eltiempo.com/files/image_640_428/files/crop/uploads/2018/05/25/5b08ab38c91eb.r_1527466171569.0-0-3000-1503.jpeg',
     description:

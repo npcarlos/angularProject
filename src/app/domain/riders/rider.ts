@@ -15,6 +15,7 @@ export interface CrewTeamTemplate {
   security?: CrewMemberTemplate[];
   others?: CrewMemberTemplate[];
 }
+
 export interface InputRiderTemplate {
   channelNumber: number;
   instrument?: GeneralMusicalInstrumentModel;
@@ -22,6 +23,13 @@ export interface InputRiderTemplate {
   microphone?: string;
   stand?: string;
   inserts?: string;
+}
+
+export interface MixRiderTemplate {
+  mixNumber: number;
+  description: string;
+  monitor: string;
+  notes?: string;
 }
 
 export interface StageSpecs {
@@ -37,6 +45,7 @@ export interface ArtistRiderTemplate {
   name: string;
   instruments: GeneralMusicalInstrumentModel[];
   inputList: InputRiderTemplate[];
+  mixesList: MixRiderTemplate[];
   crewList: CrewTeamTemplate;
   stageSpecs: StageSpecs;
   created_at: Date;
@@ -48,6 +57,7 @@ export class ArtistRiderModel implements ArtistRiderTemplate {
   name: string;
   instruments: GeneralMusicalInstrumentModel[];
   inputList: InputRiderTemplate[];
+  mixesList: MixRiderTemplate[];
   crewList: CrewTeamTemplate;
   stageSpecs: StageSpecs;
   created_at: Date;
@@ -59,6 +69,7 @@ export class ArtistRiderModel implements ArtistRiderTemplate {
     this.name = template.name;
     this.instruments = template.instruments || [];
     this.inputList = template.inputList || [];
+    this.mixesList = template.mixesList || [];
     this.crewList = template.crewList;
     this.stageSpecs = template.stageSpecs;
     this.created_at = template.created_at;

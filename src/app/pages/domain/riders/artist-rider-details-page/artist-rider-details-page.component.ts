@@ -195,10 +195,10 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
       { title: 'Ins. FOH', fieldName: 'inserts', alignment: 'left' },
     ];
     this.mixesListTableFields = [
-      { title: 'Mix', fieldName: 'mix', alignment: 'center' },
+      { title: 'Mix', fieldName: 'mixNumber', alignment: 'center' },
       { title: 'Descripción', fieldName: 'description', alignment: 'left' },
-      { title: 'Nota', fieldName: 'notes', alignment: 'left' },
-      { title: 'EQ', fieldName: 'eq', alignment: 'center' },
+      { title: 'Monitor', fieldName: 'monitor', alignment: 'left' },
+      { title: 'Nota', fieldName: 'notes', alignment: 'center' },
     ];
 
     this.roomingListTableFields = [
@@ -207,7 +207,7 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
     ];
     this.flyingListTableFields = [
       { title: 'Req. Habitación', fieldName: 'mix', alignment: 'center' },
-      { title: 'Crew members', fieldName: 'description', alignment: 'left' },
+      { title: 'Cabina', fieldName: 'description', alignment: 'left' },
     ];
     this.currentSubpage = this.subpages[1];
   }

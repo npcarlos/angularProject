@@ -8,7 +8,7 @@ export const BARS = [
     name: 'Matik - Matik',
     subtitle: 'Cra 11 # 67 - 20, Bogotá DC',
     verified_status: VerificationStatus.VERIFIED,
-    profile_pic: './assets/mock_img/mm_profile.png',
+    profile_pic: 'http://npcarlos.co/artistsHive_mocks/profile_mm.png',
     photo:
       'https://scontent.fbog4-2.fna.fbcdn.net/v/t1.6435-9/103692966_10158480139524521_1314928447462667274_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=e3f864&_nc_ohc=H1BTGqxYLxUAX-qLLTw&_nc_ht=scontent.fbog4-2.fna&oh=00_AT9jEk3fWc8lGE10OBZaP3_UC7YTKYSjJjfRNkn3BM55tw&oe=6284015D',
     description:
@@ -20,7 +20,7 @@ export const BARS = [
     name: 'Casa Kilele',
     subtitle: 'Cl. 28a # 16a - 31, Bogotá DC',
     verified_status: VerificationStatus.NON_VERIFIED,
-    profile_pic: './assets/mock_img/ck_profile.jpg',
+    profile_pic: 'http://npcarlos.co/artistsHive_mocks/profile_ck.jpg',
     photo:
       'https://www.eltiempo.com/files/image_640_428/files/crop/uploads/2018/05/25/5b08ab38c91eb.r_1527466171569.0-0-3000-1503.jpeg',
     description:
@@ -44,7 +44,7 @@ export const BARS = [
     name: 'Disco Jaguar',
     subtitle: 'Ak. 7 # 59-30, Bogotá DC',
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic: './assets/mock_img/dj_profile.jpg',
+    profile_pic: 'http://npcarlos.co/artistsHive_mocks/profile_dj.jpg',
     photo:
       'https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/196750348_335743828122435_8635650371587580230_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=NdWgL11xdpYAX8yYrtO&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-1XET9IkNFK-__GKmu1sR2X1fryCb1hEOciRe6fk5UCA&oe=627F9283',
     description:

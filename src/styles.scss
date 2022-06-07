@@ -1,31 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
 
-.h-typography{
-  h1, h2{
+.h-typography {
+  h1,
+  h2 {
     font-family: 'Ms Madi', cursive;
     color: rgb(122, 38, 10);
     font-weight: 600;
+    margin-top: 3rem;
   }
 
-  h3, h4, h5{
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+  h3,
+  h4,
+  h5 {
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
     color: black;
     font-weight: 700;
+    margin-top: 1.5rem;
   }
-  h1{
+  h1 {
     font-size: 2.5rem;
   }
-  h2{
+  h2 {
     font-size: 2rem;
   }
-  h3{
+  h3 {
     font-size: 1.8rem;
   }
-  h4{
-    font-size: 1.5rem;
+  h4 {
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 1.2rem;
   }
 }
 
@@ -45,7 +59,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-card-header .mat-card-title {
   margin-bottom: 12px;
 }
-.mat-card-subtitle{
+.mat-card-subtitle {
   font-size: 14px;
 
   display: block;

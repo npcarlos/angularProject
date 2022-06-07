@@ -16,7 +16,17 @@
 
     <div *ngIf="currentSubpage?.name === 'people'">
       <h2>Personal</h2>
-      <h3>Equipo humano</h3>
+      <ul>
+        <li (click)="onClick('crew')">Equipo humano</li>
+        <li (click)="onClick('rooming')">Rooming list</li>
+        <li (click)="onClick('transport')">Transporte</li>
+        <ul>
+          <li (click)="onClick('transport_ground')">Terrestre</li>
+          <li (click)="onClick('transport_air')">Aéreo</li>
+          <li (click)="onClick('transport_aquatic')">Marítimo</li>
+        </ul>
+      </ul>
+      <h3 id="crew">Equipo humano</h3>
       <div *ngFor="let role of crewMemberRoles">
         <h4>{{ role.title }}</h4>
         <ul>
@@ -31,50 +41,195 @@
           </li>
         </ul>
       </div>
-      <h3>Rooming List</h3>
+      <h3 id="rooming">Rooming List</h3>
       <app-table [fields]="roomingListTableFields"></app-table>
-      <h3>Flying List</h3>
+      <h3 id="transport">Transporte</h3>
+      <h4 id="transport_ground">Terrestre</h4>
+      <h5>Vehículos propios</h5>
+      <ul>
+        <li>2 motos</li>
+        <li>1 van</li>
+        <li>3 carros familiares</li>
+      </ul>
+      <h5>Vehículos externos</h5>
+      <ul>
+        <li>1 bus con capacidad para 30 pasajeros</li>
+        <li>1 camión para transportar el backline</li>
+      </ul>
+      <h4 id="transport_air">Aéreo</h4>
+      <h5>Flying List</h5>
       <app-table [fields]="flyingListTableFields"></app-table>
-      <h3>Transporte</h3>
-      <h4>Vehículos propios</h4>
-      <h4>Vehículos externos</h4>
+      <h4 id="transport_aquatic">Marítimo</h4>
     </div>
     <div *ngIf="currentSubpage?.name === 'backline'">
-      <h3>Backline propio</h3>
-      <h3>Backline externo</h3>
+      <h2>Backline</h2>
+      <ul>
+        <li (click)="onClick('required_backline')">Backline externo</li>
+        <ul>
+          <li (click)="onClick('required_backline_drums')">Batería</li>
+          <li (click)="onClick('required_backline_bass')">Bajo</li>
+          <li (click)="onClick('required_backline_guitar')">Guitarra</li>
+          <li (click)="onClick('required_backline_keyboards')">Teclado</li>
+          <li (click)="onClick('required_backline_dj')">DJ</li>
+        </ul>
+        <li (click)="onClick('own_backline')">Backline propio</li>
+      </ul>
+
+      <h3 id="required_backline">Backline externo</h3>
+      <h4 id="required_backline_drums">Batería</h4>
+      <ul>
+        <li>Bombo de 22 pulgadas</li>
+        <li>2 Bases de Snare 13 pulgadas</li>
+        <li>1 Tom de aire de 10 pulgadas</li>
+        <li>1 Tom de aire de 12 pulgadas</li>
+        <li>1 Tom de Piso de 14 pulgadas</li>
+        <li>1 Tom de Piso de 16 pulgadas</li>
+        <li>6 Bases para Platillos</li>
+        <li>1 Máquina de Hi-Hat</li>
+        <li>2 Pedales de Bombo</li>
+        <li>1 Silla de Batería</li>
+        <li>1 Alfombra de 2x2</li>
+      </ul>
+      <strong> Marca: </strong> Tama Starclassic, DW Collector Series, Yamaha Oak.
+      <h4 id="required_backline_bass">Bajo</h4>
+      <ul>
+        <li>1 Cabezote Ampeg SVT Classic</li>
+        <li>1 Cabina Ampeg 8x10</li>
+        <li>1 Stand de Instrumento</li>
+      </ul>
+      <h4 id="required_backline_guitar">Guitarra</h4>
+      <ul>
+        <li>2 Amplificadores Fender Blues Deville 4x10</li>
+        <li>2 Stands de instrumento</li>
+      </ul>
+      <h4 id="required_backline_keyboards">Teclado</h4>
+      <ul>
+        <li>2 Stand de Teclado sencillos</li>
+        <li>1 Motif XF8</li>
+        <li>1 Motif XF7</li>
+        <li>Mesa de Percusión</li>
+      </ul>
+      <h4 id="required_backline_dj">DJ</h4>
+      <ul>
+        <li>
+          Mesa para DJ Booth 1,2 Mts de Largo por 0,6 Mts de Ancho por 1 Mt de Alto. Aforada en tela Negra completamente
+          hasta la superficie
+        </li>
+      </ul>
+
+      <h3 id="own_backline">Backline propio</h3>
+      <ul>
+        <li>1 Pelican Case 1620 con Sistema para Multitrack (Hard Case, Equipaje por Bodega aprox 33kg)</li>
+        <li>2 Pelican Case 1620 con Sistema LV1 (Hard Case, Equipaje por Bodega aprox 33kg)</li>
+        <li>1 Pedal Board para Guitarra (Hard Case, Equipaje por Bodega aprox 28kg)</li>
+        <li>1 Guitarra Electro Acústica Epiphone (Hard Case, Equipaje por Bodega aprox 12kg)</li>
+        <li>1 Guitarra LSL Del Rey (Hard Case, Equipaje de mano aprox 12Kg)</li>
+        <li>1 Pedal Board para Bajo (Soft Case, Equipaje de mano 4kg)</li>
+        <li>Bajo Lackland 55-60 (Soft Case, Equipaje de mano 12Kg)</li>
+        <li>Mini Nova (Soft Case, Equipaje de mano aprox 10Kg)</li>
+        <li>2 Computadores Mac (Soft Case, Equipaje de mano aprox 12Kg)</li>
+        <li>1 Pad Roland SPD (Soft Case, Equipaje de mano aprox 3kg)</li>
+        <li>Redoblante Orange Country Maple (Soft Case, Equipaje de mano aprox 5kg)</li>
+        <li>Set de Platillos (Soft Case, Equipaje de mano aprox 11Kg)</li>
+        <li>1 Maleta con Vestuario (Soft Case, Equipaje por Bodega aprox 23kg</li>
+      </ul>
     </div>
     <div *ngIf="currentSubpage?.name === 'requirements'">
       <h2>Requerimientos técnicos</h2>
       <ul>
-        <li>Puesta en escena</li>
-        <li>Requerimientos de audio</li>
-        <li>Requerimientos de video</li>
-        <li>Requerimientos de iluminación</li>
-        <li>Efectos especiales</li>
+        <li (click)="onClick('stage')">Puesta en escena</li>
+        <li (click)="onClick('audio')">Requerimientos de audio</li>
+        <li (click)="onClick('video')">Requerimientos de video</li>
+        <li (click)="onClick('lights')">Requerimientos de iluminación</li>
+        <li (click)="onClick('specialEffects')">Efectos especiales</li>
       </ul>
-      <h2>Puesta en escena</h2>
+      <h2 id="stage">Puesta en escena</h2>
       <h3>Stage plot</h3>
+
+      <h4>Vista cenital</h4>
+      <img class="stage-plot" src="http://npcarlos.co/artistsHive_mocks/stageplot_topview.png" />
       <h4>Vista frontal</h4>
-      <h4>Vista Cenital</h4>
+      <img class="stage-plot" src="http://npcarlos.co/artistsHive_mocks/stageplot_frontview.png" />
       <h3>Tarimas y estructuras</h3>
-      <h4>Tarimas</h4>
+      <h4>Tarima</h4>
+      <ul>
+        <li><strong>Alto</strong> 2 mts</li>
+        <li><strong>Ancho</strong> 15 mts</li>
+        <li><strong>Largo</strong> 5 mts</li>
+      </ul>
       <h4>Sobretarimas</h4>
+      <h5>Batería</h5>
+      <ul>
+        <li><strong>Alto</strong> 2 mts</li>
+        <li><strong>Ancho</strong> 15 mts</li>
+        <li><strong>Largo</strong> 5 mts</li>
+      </ul>
+      <h5>Congas</h5>
+      <ul>
+        <li><strong>Alto</strong> 2 mts</li>
+        <li><strong>Ancho</strong> 15 mts</li>
+        <li><strong>Largo</strong> 5 mts</li>
+      </ul>
       <h4>Estructuras</h4>
       <h4>Techos</h4>
       <h4>HouseMix</h4>
-      <h2>Requerimientos de audio</h2>
+      <h2 id="audio">Requerimientos de audio</h2>
       <h3>Input list</h3>
       <app-table [fields]="inputListTableFields" [elements]="rider.inputList"></app-table>
       <h3>Mezclas y monitoreo</h3>
       <app-table [fields]="mixesListTableFields" [elements]="rider.mixesList"></app-table>
-      <h2>Requerimientos de video</h2>
-      <h2>Requerimientos de iluminación</h2>
-      <h2>Efectos especiales</h2>
+      <h2 id="video">Requerimientos de video</h2>
+      <h3>Reproducción de video</h3>
+      Se requiere la disponibilidad de proyección de archivos en formato mp4 o MOV en resolución 4K.
+      <h3>Pantallas</h3>
+      <h4>Pantalla izquierda</h4>
+      <ul>
+        <li><strong>Alto</strong> 2 mts</li>
+        <li><strong>Ancho</strong> 15 mts</li>
+        <li><strong>Largo</strong> 5 mts</li>
+      </ul>
+      <h4>Pantalla central</h4>
+      <ul>
+        <li><strong>Alto</strong> 2 mts</li>
+        <li><strong>Ancho</strong> 15 mts</li>
+        <li><strong>Largo</strong> 5 mts</li>
+      </ul>
+      <h4>Pantalla derecha</h4>
+      <ul>
+        <li><strong>Alto</strong> 2 mts</li>
+        <li><strong>Ancho</strong> 15 mts</li>
+        <li><strong>Largo</strong> 5 mts</li>
+      </ul>
+      <h2 id="lights">Requerimientos de iluminación</h2>
+      <h2 id="specialEffects">Efectos especiales</h2>
+      <ul>
+        <li>8 Cryo Jet Packs de Colores RGB DMX control por corte de corriente. 8 Cilindros Grandes.</li>
+        <li>2 Cañones de Ventury</li>
+        <li>12 Minas</li>
+        <li>Programador a disposición</li>
+        <li>Control ubicado en FOH</li>
+      </ul>
     </div>
-    <div *ngIf="currentSubpage?.name === 'hospitality'">
-      <h3>Camerinos</h3>
-      <h3>Input list</h3>
-      <app-table></app-table>
+    <div *ngIf="currentSubpage?.name === 'soundcheck'">
+      <h2>Prueba de sonido</h2>
+      <ul>
+        <li>La prueba de sonido se realizará mínimo 8 horas antes del show.</li>
+
+        <li>
+          El Equipo Técnico de YATRA llegará 2 horas antes que comience la prueba de sonido para ultimar detalles y
+          verificar que todo esté correcto.
+        </li>
+        <li>Todo el sistema debe estar montado y funcionando a la llegada del Equipo Técnico.</li>
+        <li>
+          Debe haber personal competente por parte de la compañía productora del evento a disposición del Equipo Técnico
+          de YATRA.
+        </li>
+        <li>La prueba de sonido tendrá una duración de 2 horas.</li>
+        <li>
+          No se permitirán cambios sobre consolas, periféricos, escenario y riggin después de realizada la prueba sin
+          autorización previa del Equipo Técnico
+        </li>
+      </ul>
     </div>
   </div>
 </div>

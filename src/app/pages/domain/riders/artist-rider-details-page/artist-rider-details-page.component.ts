@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TableFieldTemplate } from 'src/app/components/common-ui/atoms/table/table.component';
@@ -32,7 +33,11 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
   roomingListTableFields: TableFieldTemplate[] = [];
   flyingListTableFields: TableFieldTemplate[] = [];
 
-  constructor(private route: ActivatedRoute, private artistsRidersStoreService: ArtistRidersStoreServiceService) {
+  constructor(
+    private route: ActivatedRoute,
+    private viewportScroller: ViewportScroller,
+    private artistsRidersStoreService: ArtistRidersStoreServiceService
+  ) {
     this.initializeInfoSections();
   }
 
@@ -93,72 +98,33 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
             title: 'Contacto',
             attributes: [
               {
-                name: 'Website',
-                icon: 'language',
-              },
-              {
                 name: 'Email',
                 icon: 'email',
               },
               {
-                name: 'Teléfono',
+                name: 'Production manager',
                 icon: 'phone',
               },
               {
-                name: 'Facebook',
-                icon: 'info',
-              },
-              {
-                name: 'Twitter',
-                icon: 'info',
-              },
-              {
-                name: 'Instagram',
-                icon: 'info',
-              },
-              {
-                name: 'Spotify',
-                icon: 'info',
-              },
-              {
-                name: 'Youtube',
-                icon: 'info',
+                name: 'Tour manager',
+                icon: 'phone',
               },
             ],
           },
           {
-            title: 'Sello discográfico',
+            title: 'Aspectos técnicos generales',
             attributes: [
               {
-                name: '',
-                icon: 'supervisor_account',
+                name: 'Respuesta en frecuencia',
+                icon: 'info',
               },
-            ],
-          },
-          {
-            title: 'Miembros',
-            attributes: [
               {
-                name: '',
-                icon: 'supervisor_account',
+                name: 'Presión sonora',
+                icon: 'info',
               },
-            ],
-          },
-          {
-            title: 'Alimentación',
-            attributes: [
               {
-                name: '',
-                icon: 'fastfood',
-              },
-            ],
-          },
-          {
-            title: 'Tours',
-            attributes: [
-              {
-                name: '',
-                icon: 'flight',
+                name: 'Distancia FOH',
+                icon: 'info',
               },
             ],
           },
@@ -208,8 +174,11 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
     this.flyingListTableFields = [
       { title: 'Req. Habitación', fieldName: 'mix', alignment: 'center' },
       { title: 'Cabina', fieldName: 'description', alignment: 'left' },
+      { title: 'Alianzas', fieldName: 'description', alignment: 'left' },
+      { title: 'Viajero frec.', fieldName: 'description', alignment: 'left' },
+      { title: 'Cuenta viajero frec.', fieldName: 'description', alignment: 'left' },
     ];
-    this.currentSubpage = this.subpages[1];
+    this.currentSubpage = this.subpages[0];
   }
 
   setCurrentSubpage(newSubpage: any) {
@@ -226,5 +195,10 @@ export class ArtistRiderDetailsPageComponent implements OnInit {
 
   crewMembersByRole(roleName: string): CrewMemberTemplate[] {
     return this.rider.crewList[roleName as keyof typeof this.rider.crewList] || [];
+  }
+
+  public onClick(elementId: string): void {
+    console.log(elementId);
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 }

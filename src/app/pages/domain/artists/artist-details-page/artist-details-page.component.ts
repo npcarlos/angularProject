@@ -103,6 +103,10 @@ export class ArtistDetailsPageComponent implements OnInit {
                 name: 'Youtube',
                 icon: 'info',
               },
+              {
+                name: 'CD Baby',
+                icon: 'info',
+              },
             ],
           },
           {
@@ -182,6 +186,10 @@ export class ArtistDetailsPageComponent implements OnInit {
             attributes: [
               {
                 name: 'Fotos',
+                icon: 'photo',
+              },
+              {
+                name: 'Video',
                 icon: 'photo',
               },
             ],

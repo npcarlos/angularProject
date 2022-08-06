@@ -7,7 +7,12 @@
       alt="{{ title }}"
       (click)="clicGeneral(EntityCardEventSource.PROFILE_PICTURE)"
     />
-    <mat-card-title class="mat-card-title"
+    <div mat-card-avatar class="date_day">
+      {{ profile_pic_day }}
+      <div mat-card-avatar class="date_hour">{{ profile_pic_hour }}</div>
+    </div>
+
+    <mat-card-title class="mat-card-title" [ngClass]="profile_pic_text ? 'event' : ''"
       ><span (click)="clicGeneral(EntityCardEventSource.TITLE)">{{ title }}</span>
       <app-verification-sign
         [verification_status]="verification_status"
@@ -15,9 +20,9 @@
       ></app-verification-sign
     ></mat-card-title>
 
-    <mat-card-subtitle class="mat-card-subtitle" (click)="clicGeneral(EntityCardEventSource.SUBTITLE)">{{
-      subtitle
-    }}</mat-card-subtitle>
+    <mat-card-subtitle class="mat-card-subtitle" (click)="clicGeneral(EntityCardEventSource.SUBTITLE)">
+      <div [innerText]="subtitle"></div>
+    </mat-card-subtitle>
   </mat-card-header>
 
   <img
@@ -33,7 +38,7 @@
       {{ description }}
     </p>
   </mat-card-content>
-  <mat-card-actions class="mat-card-actions">
+  <mat-card-actions class="mat-card-actions" *ngIf="showActionButtons">
     <button mat-button class="mat-focus-indicator mat-button mat-button-base">
       <span class="mat-button-wrapper">LIKE</span>
       <!-- <span matripple class="mat-ripple mat-button-ripple"></span> -->

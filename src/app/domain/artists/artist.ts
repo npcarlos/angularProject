@@ -6,9 +6,10 @@ export interface ArtistTemplate {
   name: string;
   subtitle: string;
   verified_status: VerificationStatus;
-  profile_pic: string;
-  photo: string;
+  profile_pic?: string;
+  photo?: string;
   description: string;
+  date?: Date;
 }
 export class ArtistModel implements ArtistTemplate {
   artistType: string;
@@ -19,6 +20,7 @@ export class ArtistModel implements ArtistTemplate {
   profile_pic: string;
   photo: string;
   description: string;
+  date?: Date;
 
   constructor(private readonly template: ArtistTemplate) {
     this.artistType = template.artistType;
@@ -29,5 +31,6 @@ export class ArtistModel implements ArtistTemplate {
     this.profile_pic = template.profile_pic;
     this.photo = template.photo;
     this.description = template.description;
+    this.date = template.date;
   }
 }

@@ -45,11 +45,15 @@ export class EntityCardComponent implements OnInit {
   @Output() onCardClicked: EventEmitter<EntityCardEvent> = new EventEmitter<EntityCardEvent>();
 
   profile_pic: string;
+  profile_pic_text: string;
+  profile_pic_day: string;
+  profile_pic_hour: string;
   title: string;
   subtitle: string;
   main_photo: string;
   description: string;
   verification_status: VerificationStatus = VerificationStatus.NON_VERIFIED;
+  showActionButtons: boolean;
 
   constructor() {}
 
@@ -92,6 +96,10 @@ export class EntityCardComponent implements OnInit {
     // Header
     if (this.entityCardParams.showProfilePicture) {
       this.profile_pic = this.item.profile_pic;
+      if (this.item.date) {
+        this.profile_pic_day = `${this.item.date?.getDate()}`;
+        this.profile_pic_hour = `${this.item.date?.getHours()} hrs`;
+      }
     }
 
     if (this.entityCardParams.showTitle) {
@@ -114,6 +122,9 @@ export class EntityCardComponent implements OnInit {
     if (this.entityCardParams.showDescription) {
       this.description = this.item.description;
     }
+
+    // Action Buttons
+    this.showActionButtons = this.entityCardParams.showActionButtons;
   }
 
   clicGeneral(eventSource: EntityCardEventSource) {

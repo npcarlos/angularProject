@@ -1,5 +1,28 @@
 <h1>Mis eventos</h1>
 <div class="full-content">
   <h3>Próximos eventos</h3>
+  <h2 class="center">Agosto</h2>
+
+  <div class="gallery">
+    <app-entity-card
+      class="event-card"
+      *ngFor="let recomendation of pastEventsList"
+      [item]="recomendation"
+      [entityCardParams]="artistsRecomendationCardParams"
+      (onCardClicked)="eventClicked($event)"
+    ></app-entity-card>
+  </div>
+  <!-- </div> -->
   <h3>Eventos pasados</h3>
+  <h2 class="center">Julio</h2>
+
+  <div class="gallery">
+    <app-entity-card
+      class="event-card"
+      *ngFor="let recomendation of nextEventsList"
+      [item]="recomendation"
+      [entityCardParams]="artistsRecomendationCardParams"
+      (onCardClicked)="eventClicked($event)"
+    ></app-entity-card>
+  </div>
 </div>

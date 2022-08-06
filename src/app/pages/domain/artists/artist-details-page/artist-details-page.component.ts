@@ -127,24 +127,24 @@ export class ArtistDetailsPageComponent implements OnInit {
               },
             ],
           },
-          {
-            title: 'Alimentación',
-            attributes: [
-              {
-                name: '',
-                icon: 'fastfood',
-              },
-            ],
-          },
-          {
-            title: 'Tours',
-            attributes: [
-              {
-                name: '',
-                icon: 'flight',
-              },
-            ],
-          },
+          // {
+          //   title: 'Alimentación',
+          //   attributes: [
+          //     {
+          //       name: '',
+          //       icon: 'fastfood',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'Tours',
+          //   attributes: [
+          //     {
+          //       name: '',
+          //       icon: 'flight',
+          //     },
+          //   ],
+          // },
         ],
       },
       {
@@ -205,48 +205,48 @@ export class ArtistDetailsPageComponent implements OnInit {
           },
         ],
       },
-      {
-        name: 'requirements',
-        title: 'Escena',
-        sections: [
-          {
-            title: 'Instrumentación',
-            attributes: [
-              {
-                name: '',
-                icon: 'info',
-              },
-            ],
-          },
-          {
-            title: 'Iluminación',
-            attributes: [
-              {
-                name: '',
-                icon: 'info',
-              },
-            ],
-          },
-          {
-            title: 'Audiovisual',
-            attributes: [
-              {
-                name: '',
-                icon: 'info',
-              },
-            ],
-          },
-          {
-            title: 'Escenografía',
-            attributes: [
-              {
-                name: '',
-                icon: 'info',
-              },
-            ],
-          },
-        ],
-      },
+      // {
+      //   name: 'requirements',
+      //   title: 'Escena',
+      //   sections: [
+      //     {
+      //       title: 'Instrumentación',
+      //       attributes: [
+      //         {
+      //           name: '',
+      //           icon: 'info',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Iluminación',
+      //       attributes: [
+      //         {
+      //           name: '',
+      //           icon: 'info',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Audiovisual',
+      //       attributes: [
+      //         {
+      //           name: '',
+      //           icon: 'info',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Escenografía',
+      //       attributes: [
+      //         {
+      //           name: '',
+      //           icon: 'info',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         name: 'requirements',
         title: 'Social',

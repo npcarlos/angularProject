@@ -7,7 +7,7 @@
       alt="{{ title }}"
       (click)="clicGeneral(EntityCardEventSource.PROFILE_PICTURE)"
     />
-    <div mat-card-avatar class="date_day">
+    <div *ngIf="!profile_pic" mat-card-avatar class="date_day">
       {{ profile_pic_day }}
       <div mat-card-avatar class="date_hour">{{ profile_pic_hour }}</div>
     </div>
@@ -32,6 +32,7 @@
     alt="{{ title }}"
     (click)="clicGeneral(EntityCardEventSource.MAIN_PHOTO)"
     class="entity-header-image"
+    style="max-height: 180px; width: 100%; margin-left: 0; margin-right: auto; min-height: 180px; margin-top: 1rem"
   />
   <mat-card-content>
     <p class="card-description">

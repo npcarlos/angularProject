@@ -1,7 +1,0 @@
-{
-  "host": "ftp.host.com",
-  "user": "userid",
-  "password": "password",
-  "localPath": "dist/project",
-  "remotePath": "mainFolder/innerFolders"
-}

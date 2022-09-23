@@ -1,34 +1,23 @@
-// vendor
-import {BrowserRouter as Router} from "react-router-dom";
-import {Suspense, useContext} from "react";
-import {IntlProvider} from "react-intl";
-import {HelmetProvider} from "react-helmet-async";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Suspense } from "react";
 
-// translations
-import {appMessages} from "./translations";
-// routes
-import {RoutesApp} from "./routes";
-import {HvAppContext, HvAppContextProvider} from "./common";
+import { RoutesApp } from "./routes";
+import SideNav from "./components/shared/sidenav";
 
-const App = () => {
-  const {lang, messages} = useContext(HvAppContext);
-  const onError = (error: any) => console.log(`Error Messages: ${error}`);
+const App = () => (
+  <Router>
+    <div className="wrapper">
+      <SideNav />
 
-  return (
-    <HelmetProvider>
-      <HvAppContextProvider appMessages={appMessages}>
-        <Router>
-          <IntlProvider defaultLocale="es" locale={lang} messages={messages} onError={onError}>
-            <div className="wrapper">
-              <Suspense fallback={<div>Loading...</div>}>
-                <RoutesApp />
-              </Suspense>
-            </div>
-          </IntlProvider>
-        </Router>
-      </HvAppContextProvider>
-    </HelmetProvider>
-  );
-};
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="content">
+          <div className="content">
+            <RoutesApp />
+          </div>
+        </div>
+      </Suspense>
+    </div>
+  </Router>
+);
 
 export default App;

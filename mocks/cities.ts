@@ -2,7 +2,7 @@ import { ArtistModel } from 'src/app/domain/artists/artist';
 import { VerificationStatus } from 'src/app/domain/enums/verification';
 
 const today = new Date();
-export const PAST_EVENTS = [
+export const CITIES = [
   new ArtistModel({
     artistType: 'musician',
     id: '1',
@@ -61,4 +61,4 @@ export const NEXT_EVENTS = [
   }),
 ];
 
-export const EVENTS = [...PAST_EVENTS, ...NEXT_EVENTS];
+export const EVENTS = [...CITIES, ...NEXT_EVENTS];

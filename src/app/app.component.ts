@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  notes: Section[] = [
+  general: Section[] = [
     {
       name: 'Home',
       path: '',
@@ -36,6 +36,39 @@ export class AppComponent implements OnInit {
     },
     {
       name: 'Próximos eventos',
+      path: 'events',
+      updated: new Date('1/18/16'),
+    },
+    {
+      name: 'Comunidad',
+      path: 'events',
+      updated: new Date('1/18/16'),
+    },
+  ];
+
+  tips: Section[] = [
+    {
+      name: 'Salas de ensayo',
+      path: 'events',
+      updated: new Date('1/18/16'),
+    },
+    {
+      name: 'Patrocinios',
+      path: 'events',
+      updated: new Date('1/18/16'),
+    },
+    {
+      name: 'Comunicación',
+      path: 'events',
+      updated: new Date('1/18/16'),
+    },
+    {
+      name: 'Legal',
+      path: 'events',
+      updated: new Date('1/18/16'),
+    },
+    {
+      name: 'Finanzas',
       path: 'events',
       updated: new Date('1/18/16'),
     },

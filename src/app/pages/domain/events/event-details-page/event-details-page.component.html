@@ -1,1 +1,37 @@
-<p>events-details-page works!</p>
+<div *ngIf="event" class="profile-header">
+  <img *ngIf="event.profile_pic" class="avatar" src="{{ event.profile_pic }} " alt="{{ event.name }}" />
+  <div class="header-title">
+    <div class="artist-name">
+      <h2>{{ event.name }}</h2>
+    </div>
+    <div class="artist-name">
+      <p>{{ event.subtitle }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="full-content">
+  <div class="subpages-tabs">
+    <div *ngFor="let subpage of subpages">
+      <div class="subpage-tab" (click)="setCurrentSubpage(subpage)">
+        <h5>
+          {{ subpage.title }}
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="currentSubpage">
+    <div *ngIf="!currentSubpage.type">
+      <div *ngFor="let section of currentSubpage.sections">
+        <h2 class="section-title">{{ section.title }}</h2>
+        <div class="attribute" *ngFor="let attribute of section.attributes">
+          <mat-icon class="attribute-icon">{{ attribute.icon }}</mat-icon>
+          <p>{{ attribute.name }}: {{ getData(attribute.name) }}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="currentSubpage.type === 'table'">
+      <app-table [fields]="currentSubpage.fields" [elements]="[currentSubpage.data[0]]"></app-table>
+    </div>
+  </div>
+</div>

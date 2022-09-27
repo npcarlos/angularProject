@@ -20,6 +20,12 @@ export class TableComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.rendered_elements = this.elements.map((element) => this.fields.map((field) => element[field.fieldName]));
+    this.rendered_elements = this.elements.map((element) =>
+      this.fields.map((field) => {
+        console.log('######', element, field);
+        return element[field.fieldName];
+      })
+    );
+    console.log(this.rendered_elements, this.fields, this.elements, '&&', typeof this.elements);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EntityCardEvent } from 'src/app/components/common-ui/atoms/entity-card/entity-card.events';
 import { ArtistModel } from 'src/app/domain/artists/artist';
 import { RecommendationCardParams } from 'src/app/pages/home/home-sections/recommended-selection/recommended-selection.component';
@@ -12,6 +12,7 @@ import { EventsStoreServiceService } from 'src/app/services/events/events-store-
   styleUrls: ['./events-list-page.component.scss'],
 })
 export class EventsListPageComponent implements OnInit {
+  artistId: string;
   pastEventsList: ArtistModel[] = [];
   nextEventsList: ArtistModel[] = [];
 
@@ -21,14 +22,24 @@ export class EventsListPageComponent implements OnInit {
     showDescription: false,
   };
 
-  constructor(private router: Router, private eventsStoreService: EventsStoreServiceService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private eventsStoreService: EventsStoreServiceService
+  ) {}
 
   ngOnInit(): void {
     this.eventsStoreService.getPastEvents().subscribe((events) => (this.pastEventsList = events));
     this.eventsStoreService.getNextEvents().subscribe((events) => (this.nextEventsList = events));
+
+    this.route.params.subscribe((params) => {
+      this.artistId = params['artistId'];
+      console.log('Artist id', this.artistId);
+    });
   }
 
   eventClicked(event: EntityCardEvent) {
     console.log(event);
+    this.router.navigate([`/event/${event.item.id}`]);
   }
 }

@@ -1,7 +1,6 @@
 import "./index.scss";
 import { useParams } from "react-router-dom";
 import {
-  AligmentVerifiedMark,
   ArtistModel,
   ARTISTS,
   URL_PARAMETER_NAMES,
@@ -9,8 +8,6 @@ import {
 import { ARTIST_DETAIL_SUB_PAGE_CONFIG } from "../../../../constants/config-artist-detail";
 import { useState } from "react";
 import VerifiedArtist from "../../../shared/VerifiedArtist";
-import * as Icons from "react-icons/all";
-import React from "react";
 import DynamicIcons from "../../../shared/DynamicIcons";
 
 const ArtistDetailPage = () => {

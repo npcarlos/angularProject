@@ -1,5 +1,17 @@
 export enum PATHS {
-  HOME = "/",
+  HOME = "/home",
+  ARTIST = "/artist",
+  MAIN = "/",
   EVENTS = "/events",
   NOT_FOUND = "*",
+  SHOWS = "/shows",
+  RIDERS = "/riders",
+}
+
+export enum SUB_PATHS {
+  DETAIL= "detail"
+}
+
+export enum URL_PARAMETER_NAMES {
+  ELEMENT_ID = "id",
 }

@@ -6,10 +6,11 @@ export enum PATHS {
   NOT_FOUND = "*",
   SHOWS = "/shows",
   RIDERS = "/riders",
+  SEARCH = "/search",
 }
 
 export enum SUB_PATHS {
-  DETAIL= "detail"
+  DETAIL = "detail",
 }
 
 export enum URL_PARAMETER_NAMES {

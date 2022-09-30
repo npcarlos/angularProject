@@ -10,6 +10,10 @@ export interface ArtistTemplate {
   date?: Date;
 }
 
+export interface ArtistState extends ArtistTemplate {
+  [key: string]: any;
+}
+
 export class ArtistModel implements ArtistTemplate {
   artistType: string;
   id: string;
@@ -211,8 +215,7 @@ export const MUSICIANS = [
     verified_status: VerificationStatus.VERIFIED,
     profile_pic: "http://npcarlos.co/artistsHive_mocks/profile_33.jpg",
     photo: "http://npcarlos.co/artistsHive_mocks/cover_33.jpg",
-    description:
-      "Salsa, boogaloo, Funk, jazz and folk. https://linkr.bio/la-33",
+    description: "Salsa, boogaloo, Funk, jazz and folk. https://linkr.bio/la-33",
   }),
   new ArtistModel({
     artistType: "musician",
@@ -271,8 +274,7 @@ export const BARS = [
     name: "Galería Café Libro 93",
     subtitle: "Cra 11a # 93 - 42",
     verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
-    profile_pic:
-      "https://pbs.twimg.com/profile_images/943944101820551168/pjNPndM1_400x400.jpg",
+    profile_pic: "https://pbs.twimg.com/profile_images/943944101820551168/pjNPndM1_400x400.jpg",
     photo:
       "https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/196750348_335743828122435_8635650371587580230_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=NdWgL11xdpYAX8yYrtO&_nc_ht=scontent.fbog4-1.fna&oh=00_AT-1XET9IkNFK-__GKmu1sR2X1fryCb1hEOciRe6fk5UCA&oe=627F9283",
     description:
@@ -298,14 +300,46 @@ export function getCustomList(positions: number, list: any) {
   const returnList = [];
   const indexArray: number[] = [];
   const max = list?.length | 0;
+
   if (max > 0) {
     while (returnList.length < positions) {
       const index = Math.floor(Math.random() * max);
+
       if (!indexArray.find((idx) => idx === index)) {
         indexArray.push(index);
         returnList.push(list[index]);
       }
     }
   }
+
   return returnList;
+}
+enum findByModel {
+  name = "name",
+  subtitle = "subtitle",
+  description = "description",
+}
+
+export function findCustomList(words: string) {
+  const wordFormatted = words.toLowerCase();
+
+  // ARTISTS
+  const newArtistsList: ArtistModel[] = ARTISTS.filter((data: ArtistState) => {
+    return Object.keys(findByModel).some((model: string) => {
+      if (data[model].toLowerCase().includes(wordFormatted)) {
+        return true;
+      }
+    });
+  });
+
+  // PLACES
+  const newPlacesList: ArtistModel[] = PLACES.filter((data: ArtistState) => {
+    return Object.keys(findByModel).some((model: string) => {
+      if (data[model].toLowerCase().includes(wordFormatted)) {
+        return true;
+      }
+    });
+  });
+
+  return {newArtistsList, newPlacesList};
 }

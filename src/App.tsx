@@ -5,7 +5,7 @@ import { RoutesApp } from "./routes";
 import SideNav from "./components/shared/sidenav";
 
 const App = () => (
-  <Router>
+  <Router basename="/artistsHive/">
     <div className="wrapper">
       <SideNav />
 

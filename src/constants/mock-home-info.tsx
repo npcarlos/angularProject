@@ -305,6 +305,17 @@ export const BARS = [
     description:
       "Céntrico lugar de coincidencia de artistas, concurrentes y paisanos. Garita de Música Corriente y Grupo Hangar.",
   }),
+  new ArtistModel({
+    artistType: "place",
+    id: "6",
+    name: "Latino power",
+    subtitle: "Calle 58 # 13-88, Bogotá DC",
+    verified_status: VerificationStatus.VERIFIED_AND_APPROVED,
+    profile_pic: "http://npcarlos.co/artistsHive_mocks/profile_latp.jpg",
+    photo: "http://npcarlos.co/artistsHive_mocks/cover_latp.jpg",
+    description:
+      "Siempre hemos sido un espacio autogestionado, nos hemos consolidado como una de la salas más importantes en Bogotá para los nuevos ritmos colombianos, la promoción de artistas emergentes, la recordación de los clásicos y la influencia internacional.",
+  }),
 ];
 
 export const PLACES = [...BARS];

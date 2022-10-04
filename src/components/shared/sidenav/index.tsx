@@ -26,6 +26,11 @@ const SideNav = () => {
       updated: new Date("2/20/16"),
     },
     {
+      name: "Mi perfil",
+      path: `profile/${SUB_PATHS.ELEMENT_DETAILS}`,
+      updated: new Date("2/20/16"),
+    },
+    {
       name: "Mi banda",
       path: `artist/${SUB_PATHS.ELEMENT_DETAILS}`,
       updated: new Date("2/20/16"),

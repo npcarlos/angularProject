@@ -1,6 +1,10 @@
 import {useState} from "react";
 import {Button, Form, InputGroup} from "react-bootstrap";
+
+import DynamicIcons from "../DynamicIcons";
+
 import "./search.scss";
+import {SearchIcon} from "./styles";
 
 export const SearchComponent = ({handleSearch}: {handleSearch: () => void}) => {
   const [text, setText] = useState("");
@@ -20,6 +24,9 @@ export const SearchComponent = ({handleSearch}: {handleSearch: () => void}) => {
           value={text}
           onChange={handleText}
         />
+        <SearchIcon>
+          <DynamicIcons className="bi bi-search" color="#7a260a" iconName="FaSearch" size={20} />
+        </SearchIcon>
         <Button id="button-addon2" variant="outline-secondary" onClick={() => handleSearch()}>
           Buscar
         </Button>

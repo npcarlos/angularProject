@@ -5,6 +5,7 @@ import { SUB_PATHS } from "../../../constants";
 
 import { SearchComponent } from "../search";
 import "./index.scss";
+import DynamicIcons from "../DynamicIcons";
 
 const SideNav = () => {
   const [show, setShow] = useState(false);
@@ -66,11 +67,7 @@ const SideNav = () => {
         href={void 0}
         onClick={() => navigateTo(note?.path)}
       >
-        <img
-          alt="page Logo"
-          className="menu-option-img"
-          src="/src/assets/img/page-empty.svg"
-        />
+        <DynamicIcons iconName="AiFillFile" size={25} />
         <span className="menu-option-label">{note.name}</span>
       </a>
     );

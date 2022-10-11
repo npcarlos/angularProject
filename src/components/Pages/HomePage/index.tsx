@@ -21,7 +21,8 @@ const HomePage = () => (
     {mainSection(
       "Artistas",
       "Estos son los artistas nuevos más solicitados",
-      getCustomList(10, artistList)
+      getCustomList(10, artistList),
+      { useNewCard: true }
     )}
 
     {mainSection(

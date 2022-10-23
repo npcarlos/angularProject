@@ -1,19 +1,21 @@
-import {useEffect, useState} from "react";
-import {Link, useSearchParams} from "react-router-dom";
+import "../HomePage//MainHome/index.scss";
+import "../HomePage//MainSection/index.scss";
+import "../HomePage//WelcomeSection/index.scss";
+import "./search.scss";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Collapse from "react-bootstrap/Collapse";
 
-import {ArtistModel, findCustomList} from "../../../constants";
-import {mainSection} from "../HomePage/home.utils";
-import "../HomePage/index.scss";
-import "./search.scss";
+import { ArtistModel, findCustomList } from "../../../constants";
 import DynamicIcons from "../../shared/DynamicIcons";
+import MainSection from "../HomePage/MainSection";
 
 export default function SearchPage() {
   const [open, setOpen] = useState({
     artistsOpen: false,
     placesOpen: false,
   });
-  const [results, setResults] = useState<{[key: string]: ArtistModel[]}>({
+  const [results, setResults] = useState<{ [key: string]: ArtistModel[] }>({
     newArtistsList: [],
     newPlacesList: [],
   });
@@ -22,11 +24,11 @@ export default function SearchPage() {
 
   useEffect(() => {
     if (!!q) {
-      const {newArtistsList, newPlacesList} = findCustomList(q);
+      const { newArtistsList, newPlacesList } = findCustomList(q);
 
-      setResults({...results, newArtistsList, newPlacesList});
+      setResults({ ...results, newArtistsList, newPlacesList });
     } else if (!q) {
-      setResults({...results, newArtistsList: [], newPlacesList: []});
+      setResults({ ...results, newArtistsList: [], newPlacesList: [] });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q]);
@@ -54,7 +56,7 @@ export default function SearchPage() {
         <section>
           <div
             className="group-title-icon"
-            onClick={() => setOpen({...open, placesOpen: !open.placesOpen})}
+            onClick={() => setOpen({ ...open, placesOpen: !open.placesOpen })}
           >
             <h3 className="main-section-title">Places</h3>
             <DynamicIcons color="#7a260a" iconName="AiOutlineDown" size="20" />
@@ -63,9 +65,12 @@ export default function SearchPage() {
           <Collapse in={open.placesOpen}>
             <div id="example-collapse-text-2">
               <article className="day-forecast">
-                {mainSection("", "", results.newPlacesList, {
-                  hidePhoto: true,
-                })}
+                <MainSection
+                  title={""}
+                  description={""}
+                  listView={results.newPlacesList}
+                  params={{ hidePhoto: true }}
+                />
               </article>
             </div>
           </Collapse>
@@ -75,7 +80,7 @@ export default function SearchPage() {
         <section>
           <div
             className="group-title-icon"
-            onClick={() => setOpen({...open, artistsOpen: !open.artistsOpen})}
+            onClick={() => setOpen({ ...open, artistsOpen: !open.artistsOpen })}
           >
             <h3 className="main-section-title">Artistas</h3>
             <DynamicIcons color="#7a260a" iconName="AiOutlineDown" size="20" />
@@ -89,7 +94,10 @@ export default function SearchPage() {
                     <img className="profile-avatar" src={artist.profile_pic} />
                   )}
                   <article className="day-forecast">
-                    <Link className="ah-search__section__link" to={`/artist/detail/${artist.id}`}>
+                    <Link
+                      className="ah-search__section__link"
+                      to={`/artist/detail/${artist.id}`}
+                    >
                       <h4>{artist.name}</h4>
                     </Link>
                     <p>

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Offcanvas, Navbar, Container } from "react-bootstrap";
-import { SUB_PATHS } from "../../../constants";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Offcanvas, Navbar, Container} from "react-bootstrap";
 
-import { SearchComponent } from "../search";
+import {SUB_PATHS} from "../../../constants";
+import {SearchComponent} from "../search";
 import "./index.scss";
 import DynamicIcons from "../DynamicIcons";
 
@@ -13,12 +13,6 @@ const SideNav = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const handleSearch = () => {
-    const q = (document.getElementsByName("search")[0] as HTMLInputElement)
-      .value;
-
-    navigate(`/search?q=${q}`, { replace: true, state: {} });
-  };
 
   const general: Section[] = [
     {
@@ -138,7 +132,7 @@ const SideNav = () => {
               width="100"
             />
           </div>
-          <SearchComponent handleSearch={handleSearch} />
+          <SearchComponent />
           <div>
             {logosRedes()}
             <a className="brand-text" href="#">
@@ -146,11 +140,7 @@ const SideNav = () => {
             </a>
           </div>
           {!!show && (
-            <Navbar.Offcanvas
-              placement="start"
-              show={show}
-              onHide={handleClose}
-            >
+            <Navbar.Offcanvas placement="start" show={show} onHide={handleClose}>
               <Offcanvas.Header closeButton>
                 <h1 className="menu-brand">Artist Hive</h1>
               </Offcanvas.Header>

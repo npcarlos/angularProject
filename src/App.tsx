@@ -3,9 +3,10 @@ import { Suspense } from "react";
 
 import { RoutesApp } from "./routes";
 import SideNav from "./components/shared/sidenav";
+import { PATHS } from "./constants";
 
 const App = () => (
-  <Router basename="/artistsHive/">
+  <Router basename={PATHS.BASENAME}>
     <div className="wrapper">
       <SideNav />
 

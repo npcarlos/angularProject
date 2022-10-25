@@ -5,6 +5,7 @@ import {Offcanvas, Navbar, Container} from "react-bootstrap";
 import {SUB_PATHS} from "../../../constants";
 import {SearchComponent} from "../search";
 import "./index.scss";
+import DynamicIcons from "../DynamicIcons";
 
 const SideNav = () => {
   const [show, setShow] = useState(false);
@@ -54,8 +55,13 @@ const SideNav = () => {
 
   const liMenuElement = (section: string, note: Section, idx: number) => {
     return (
-      <a key={idx} className="menu-option" href={void 0} onClick={() => navigateTo(note?.path)}>
-        <img alt="page Logo" className="menu-option-img" src="/src/assets/img/page-empty.svg" />
+      <a
+        key={idx}
+        className="menu-option"
+        href={void 0}
+        onClick={() => navigateTo(note?.path)}
+      >
+        <DynamicIcons iconName="AiFillFile" size={25} />
         <span className="menu-option-label">{note.name}</span>
       </a>
     );

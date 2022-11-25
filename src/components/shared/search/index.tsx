@@ -5,10 +5,10 @@ import "./search.scss";
 import { SearchItem } from "./search-item";
 import DynamicIcons from "../DynamicIcons";
 
-export const SearchComponent = () => {
+export const SearchComponent = (props: any) => {
+  const { openedStatus } = props;
   const [text, setText] = useState("");
   const [focused, setFocused] = useState(false);
-  const [openedSearchInputText, openSearchInputText] = useState(true);
 
   const wrapperRef = useRef<HTMLHeadingElement>(null);
 
@@ -41,22 +41,13 @@ export const SearchComponent = () => {
     setText(event.target.value || "");
   };
 
-  const showHideSearchField = (event: any) => {
-    openSearchInputText(!openedSearchInputText);
-    console.log("Abierto", openedSearchInputText);
-  };
-
-  let searchIcon = "AiOutlineSearch";
   let stylesSearchField = ["hidden"];
-  if (openedSearchInputText) {
-    searchIcon = "MdSearchOff";
+  if (openedStatus) {
     stylesSearchField = ["ah-nav-search"];
   }
+  console.log("Abierto Search", openedStatus);
   return (
     <>
-      <span onClick={showHideSearchField}>
-        <DynamicIcons iconName={searchIcon} size={30} />
-      </span>
       <div ref={wrapperRef} className={stylesSearchField.join(" ")}>
         <InputGroup>
           <Form.Control

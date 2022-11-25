@@ -9,10 +9,15 @@ import DynamicIcons from "../DynamicIcons";
 
 const SideNav = () => {
   const [show, setShow] = useState(false);
+  const [openedSearchInputText, openSearchInputText] = useState(false);
   const navigate = useNavigate();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const showHideSearchField = (event: any) => {
+    openSearchInputText(!openedSearchInputText);
+  };
 
   const general: Section[] = [
     {
@@ -115,6 +120,11 @@ const SideNav = () => {
     );
   };
 
+  let searchIcon = "AiOutlineSearch";
+  if (openedSearchInputText) {
+    searchIcon = "MdSearchOff";
+  }
+
   return (
     <>
       <Navbar className="toolbar-header mb-3" expand="true">
@@ -132,13 +142,16 @@ const SideNav = () => {
               width="100"
             />
           </div>
-          <SearchComponent />
           <div>
+            <span onClick={showHideSearchField}>
+              <DynamicIcons iconName={searchIcon} size={30} />
+            </span>
             {logosRedes()}
             <a className="brand-text" href="#">
               Log in
             </a>
           </div>
+          <SearchComponent openedStatus={openedSearchInputText} />
           {!!show && (
             <Navbar.Offcanvas
               placement="start"

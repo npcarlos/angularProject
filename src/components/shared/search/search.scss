@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 .ah-nav-search {
   position: relative;
   width: 400px;
@@ -54,7 +57,7 @@ a.search-item__link:hover {
 }
 
 .search-item__subtitle {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .search-item__link .verified-container {
@@ -66,7 +69,7 @@ a.search-item__link:hover {
 
 .list-group-item {
   border-bottom-color: white;
-  &:last-of-type  {
+  &:last-of-type {
     border-bottom-color: rgba(0, 0, 0, 0.125);
   }
 }
@@ -98,11 +101,11 @@ a.search-item__link:hover {
       background-color: #f58f1a;
     }
     .bg-ah-border-secundary {
-      border: 1px solid rgba(#f58f1a,.5);
+      border: 1px solid rgba(#f58f1a, 0.5);
       color: currentColor;
     }
     .bg-ah-border-third {
-      border: 1px solid rgba(#d83e3e,.5);
+      border: 1px solid rgba(#d83e3e, 0.5);
       color: currentColor;
     }
     .bg-ah-third {
@@ -110,6 +113,3 @@ a.search-item__link:hover {
     }
   }
 }
-
-
-

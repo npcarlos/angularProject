@@ -1,9 +1,9 @@
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Offcanvas, Navbar, Container} from "react-bootstrap";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Offcanvas, Navbar, Container } from "react-bootstrap";
 
-import {SUB_PATHS} from "../../../constants";
-import {SearchComponent} from "../search";
+import { SUB_PATHS } from "../../../constants";
+import { SearchComponent } from "../search";
 import "./index.scss";
 import DynamicIcons from "../DynamicIcons";
 
@@ -61,7 +61,7 @@ const SideNav = () => {
         href={void 0}
         onClick={() => navigateTo(note?.path)}
       >
-        <DynamicIcons iconName="AiFillFile" size={25} />
+        <DynamicIcons iconName="AiFillFile" size={20} />
         <span className="menu-option-label">{note.name}</span>
       </a>
     );
@@ -128,7 +128,7 @@ const SideNav = () => {
             <img
               alt="Artists Hive Logo"
               className="img-logotipo"
-              src="/src/assets/img/logo.png"
+              src="http://npcarlos.co/artistsHive_mocks/logo.png"
               width="100"
             />
           </div>
@@ -140,7 +140,11 @@ const SideNav = () => {
             </a>
           </div>
           {!!show && (
-            <Navbar.Offcanvas placement="start" show={show} onHide={handleClose}>
+            <Navbar.Offcanvas
+              placement="start"
+              show={show}
+              onHide={handleClose}
+            >
               <Offcanvas.Header closeButton>
                 <h1 className="menu-brand">Artist Hive</h1>
               </Offcanvas.Header>

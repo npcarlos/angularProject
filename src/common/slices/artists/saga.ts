@@ -1,13 +1,13 @@
-import {call, put, takeLatest, delay} from "redux-saga/effects";
+import { call, put, takeLatest, delay } from "redux-saga/effects";
 
-import {request} from "../../utils/request";
-import {ArtistModel} from "../../../constants";
+import { request } from "../../utils/request";
+import { ArtistModel } from "../../../constants";
 
-import {artistsActions as actions} from ".";
+import { artistsActions as actions } from ".";
 
 export function* getArtists() {
   yield delay(500);
-  const requestURL = "https://ah-mock-api.herokuapp.com/artists";
+  const requestURL = "http://localhost:3000/artists";
 
   try {
     const artists: ArtistModel[] = yield call(request, requestURL);

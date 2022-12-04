@@ -2,7 +2,7 @@
 
 .modal-container {
     .modal-content {
-        background: #fff6eb;
+        background: $main-background-color;
     }
 
     .modal-title {
@@ -12,6 +12,12 @@
         font-family: Ms Madi,cursive;
         font-weight: bold;
         font-size: 30px;
+    }
+
+    .text-modal-info {
+      overflow: auto;
+      height: 150px;
+      margin: 10px;
     }
     
     .card-buttons-container {

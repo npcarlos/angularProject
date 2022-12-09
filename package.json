@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "dev:host": "vite --host",
+    "dev:hostremote": "vite --host --mode remote",
     "build": "tsc && vite build",
-    "build-ah": "tsc && vite build --base=/artistsHive/",
+    "build-ah": "tsc && vite build --base=/artistsHive/ ",
     "preview": "vite preview",
     "deploy": "npm run build-ah && ts-node-esm ./deployment/ftp-upload.ts"
   },

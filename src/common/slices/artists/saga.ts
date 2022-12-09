@@ -7,7 +7,7 @@ import { artistsActions as actions } from ".";
 
 export function* getArtists() {
   yield delay(500);
-  const requestURL = "http://localhost:3000/artists";
+  const requestURL = `${import.meta.env.VITE_ARTISTS_HIVE_SERVER_URL}/artists`;
 
   try {
     const artists: ArtistModel[] = yield call(request, requestURL);

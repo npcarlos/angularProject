@@ -1,20 +1,25 @@
-import {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import {useArtistsSlice} from "../../../../common/slices";
-import {selectArtists} from "../../../../common/slices/artists/selectors";
-import {ArtistModel, ARTISTS, getCustomList, PLACES} from "../../../../constants";
+import { useArtistsSlice } from "../../../../common/slices";
+import { selectArtists } from "../../../../common/slices/artists/selectors";
+import {
+  ArtistModel,
+  ARTISTS,
+  getCustomList,
+  PLACES,
+} from "../../../../constants";
 import MainSection from "../MainSection";
 import WelcomeSection from "../WelcomeSection";
 import "./index.scss";
 
 // const artistList: ArtistModel[] = ARTISTS;
 const placesList: ArtistModel[] = PLACES;
-const placeParams = {hidePhoto: true};
+const placeParams = { hidePhoto: true };
 
 const HomePage = () => {
   const artistList: ArtistModel[] = useSelector(selectArtists);
-  const {actions} = useArtistsSlice();
+  const { actions } = useArtistsSlice();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,7 +39,7 @@ const HomePage = () => {
       <MainSection
         description={"Estos son los artistas nuevos más solicitados"}
         listView={getCustomList(10, artistList)}
-        params={{useNewCard: true}}
+        params={{ useNewCard: true }}
         title={"Artistas"}
       />
 

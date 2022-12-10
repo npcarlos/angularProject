@@ -11,6 +11,7 @@ import {
 } from "../../../../constants";
 import MainSection from "../MainSection";
 import WelcomeSection from "../WelcomeSection";
+import FooterSection from "../FooterSection";
 import "./index.scss";
 
 // const artistList: ArtistModel[] = ARTISTS;
@@ -58,6 +59,8 @@ const HomePage = () => {
         params={placeParams}
         title={"Lugares"}
       />
+
+      <FooterSection></FooterSection>
     </>
   );
 };

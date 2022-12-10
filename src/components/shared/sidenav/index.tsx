@@ -26,6 +26,18 @@ const SideNav = () => {
       updated: new Date("2/20/16"),
     },
     {
+      name: "Agenda cultural",
+      path: `profile/${SUB_PATHS.ELEMENT_DETAILS}`,
+      updated: new Date("2/20/16"),
+    },
+  ];
+  const miBanda: Section[] = [
+    {
+      name: "Home",
+      path: "",
+      updated: new Date("2/20/16"),
+    },
+    {
       name: "Mi perfil",
       path: `profile/${SUB_PATHS.ELEMENT_DETAILS}`,
       updated: new Date("2/20/16"),
@@ -43,6 +55,18 @@ const SideNav = () => {
     {
       name: "Mis Riders Técnicos",
       path: `riders/${SUB_PATHS.ELEMENT_DETAILS}`,
+      updated: new Date("2/20/16"),
+    },
+  ];
+  const config: Section[] = [
+    {
+      name: "Configuración",
+      path: "",
+      updated: new Date("2/20/16"),
+    },
+    {
+      name: "Cerrar Sesión",
+      path: `profile/${SUB_PATHS.ELEMENT_DETAILS}`,
       updated: new Date("2/20/16"),
     },
   ];
@@ -175,6 +199,27 @@ const SideNav = () => {
                   </>
                 </section>
                 <hr />
+                <section className="general-sec">
+                  <>
+                    <h5 className="sec-general-label">Mi Banda</h5>
+                    <div className="option-menu-list">
+                      {miBanda.map((section: Section, idx) => {
+                        return liMenuElement("general", section, idx);
+                      })}
+                    </div>
+                  </>
+                </section>
+                <hr />
+                <section className="general-sec">
+                  <>
+                    <h5 className="sec-general-label">Configuración</h5>
+                    <div className="option-menu-list">
+                      {config.map((section: Section, idx) => {
+                        return liMenuElement("general", section, idx);
+                      })}
+                    </div>
+                  </>
+                </section>
                 {/* <section>
                                     <h5 className='sec-general'>Herramientas</h5>
                                 </section> */}
